@@ -26,6 +26,8 @@
                     <th>Product Name</th>
                     <th>Product Description</th>
                     <th>Price</th>
+                    <th>Featured</th>
+                    <th>Sold</th>
                     <th>Actions</th>
                 </tr>
 
@@ -44,16 +46,33 @@
                                 $prod_descr=$rows['Description'];
                                 $image=$rows['imageFile'];
                                 $price=number_format($rows['Price'], 2);
+                                $featured = $rows['featured'];
+                                $sold = $rows['sold'];
                                 ?>
                                
                                 <tr>
                                     <td width = "20%"><img src="<?php echo SITEURL;?>/images/<?php echo $image; ?>" alt="<?php echo $prod_descr; ?>" width = "90%"></td>
                                     <td><?php echo $prod_name;?></td>
                                     <td><?php echo $prod_descr;?></td>
-                                    <td> $ <?php echo $price;?></td>
-                                    <td>
-                                        <button onclick="updateProd(<?php echo $id;?>)" class="btn-secondary">Update Product</button>
-                                        <button onclick="removeProd(<?php echo $id;?>)" class="btn-third">Remove Product</button>
+                                    <td> $<?php echo $price;?></td>
+                                    <td><?php if ($featured == 1) {
+                                        echo "Yes";
+                                    } else {
+                                        echo "No";
+                                    }?></td>
+                                    <td><?php if ($sold == 1) {
+                                        echo "Yes";
+                                    } else {
+                                        echo "No";
+                                    }?></td>
+                                    <td width = '20%'>
+                                        <button onclick="updateProd(<?php echo $id;?>)" class="btn-secondary">Update</button>
+                                        <button onclick="removeProd(<?php echo $id;?>)" class="btn-third">Remove</button>
+                                        <button onclick="setFeatured(<?php echo $id;?>,<?php echo $featured;?>)" class="btn-secondary"><?php if ($featured == 1) {
+                                        echo "Unf";
+                                    } else {
+                                        echo "F";
+                                    }?>eature</button>
                                     </td>
                                 </tr>
                                 <?php
@@ -72,6 +91,9 @@
                 }
                 function updateProd(id=0) {
                     location.href = "update-product.php?id=" + id;
+                }
+                function setFeatured(id=0, feat=0) {
+                    location.href = "feature-product.php?id=" + id + "&feat=" + feat;
                 }
             </script>
         </div>

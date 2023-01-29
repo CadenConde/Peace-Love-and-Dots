@@ -12,6 +12,7 @@
             <ul>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="manage-products.php">Products</a></li>
+                <li><a href="manage-orders.php">Orders</a></li>
                 <li><a href="manage-account.php">Account</a></li>
         </div>
     </div>
