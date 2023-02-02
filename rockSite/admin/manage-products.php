@@ -2,7 +2,7 @@
     <div class="main-content">
         <div class="wrapper">
 
-            <h1>Manage Products</h1>
+            <div class = "title"><h1>Manage Products</h1></div>
             <br>
 
             <?php
@@ -66,9 +66,9 @@
                                         echo "No";
                                     }?></td>
                                     <td width = '20%'>
-                                        <button onclick="updateProd(<?php echo $id;?>)" class="btn-secondary">Update</button>
-                                        <button onclick="removeProd(<?php echo $id;?>)" class="btn-third">Remove</button>
-                                        <button onclick="setFeatured(<?php echo $id;?>,<?php echo $featured;?>)" class="btn-secondary"><?php if ($featured == 1) {
+                                        <button onclick="updateProd(<?php echo $id;?>)" class="btn-secondary">Update</button><br>
+                                        <button onclick="removeProd(<?php echo $id;?>)" class="btn-third">Remove</button><br>
+                                        <button onclick="setFeatured(<?php echo $id;?>,<?php echo $featured;?>)" class="btn-fourth"><?php if ($featured == 1) {
                                         echo "Unf";
                                     } else {
                                         echo "F";

@@ -1,7 +1,14 @@
 <?php include('../config/constants.php') ?>
-<div class="main-content">
+
+<head>
+        <title>Rock Website - Login Page </title>
+        <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+
         <div class="wrapper">
-            <h1>Admin Login</h1>
+            <div >
+            <h1>Rock Site Admin Login</h1>
             <br><br>
         
             <?php
@@ -26,48 +33,33 @@
                     }
                 }
             ?>
-
             <form action="" method="POST">
-                <table class="tbl-30">
-                    <tr>
-                        <td>Username: </td>
-                        <td> 
-                            <input type="text" name="username" value="">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Password: </td>
-                        <td> 
-                            <input type="password" name="password" value="">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <input type="submit" name="submit" value="Enter" class="btn-secondary">
-                        </td>
-                    </tr>
-                </table>
+                    <br>
+                    Username:  
+                    <input type="text" name="username" value="">
+                    <br><br><br>
+                    Password:
+                    <input type="password" name="password" value="">
+                    <br><br><br>
+                    <input type="submit" name="submit" value="Enter" class="btn-primary">
+                    <br><br><br>
+                
             </form>
+            </div>
+            <?php
+                if(isset($_POST['submit']))
+                {
+                    $UsernameIn = $_POST['username'];
+                    $checkPass = md5($_POST['password']);
+                    if ($checkPass == $hashedPass && $UsernameIn == $username) {
+                        $_SESSION["loggedIn"] = true;
+                        header("location:" . SITEURL . 'admin/index.php'); 
+                    } else {
+                        echo "Wrong Credentials";
+                    }
+                }
+            ?>
         </div>    
-    </div>
+    
 
-<?php include('partials/footer.php'); ?>
 
-<?php
-
-if(isset($_POST['submit']))
-{
-    $UsernameIn = $_POST['username'];
-    $checkPass = md5($_POST['password']);
-    if ($checkPass == $hashedPass) {
-        if ($UsernameIn == $username) {
-            $_SESSION["loggedIn"] = true;
-            header("location:" . SITEURL . 'admin/index.php');
-        }else {
-            echo "Wrong username";
-        }
-    } else {
-        echo "Wrong password";
-    }
-}
-?>

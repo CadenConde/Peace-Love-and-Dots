@@ -2,7 +2,7 @@
 
 <div class="main-content">
     <div class="wrapper">
-        <h1>Manage Account</h1>
+        <div class = "title"><h1>Manage Account</h1></div>
         <?php 
                
             $sql = "SELECT * FROM login";
@@ -25,7 +25,7 @@
                     <td>Username:</td>
                     <td><?php echo $username;?></td>
                     <td>
-                        <a href="change-username.php" class="btn-secondary">Change Username</a>
+                        <a href="change-username.php" class="btn-primary">Change Username</a>
                     </td>
                 </tr>
                 <tr>
@@ -40,7 +40,7 @@
                     }?>
                     </td>
                     <td>
-                        <a href="change-password.php" class="btn-secondary">Change Password</a>
+                        <a href="change-password.php" class="btn-primary">Change Password</a>
                     </td>
                 </tr>
                 <tr>

@@ -2,7 +2,7 @@
     <div class="main-content">
         <div class="wrapper">
 
-            <h1>Manage Orders</h1>
+            <div class = "title"><h1>Manage Orders</h1></div>
             <br>
 
             <?php
@@ -16,7 +16,7 @@
             <table class= "tbl-full">
                 <tr>
                     <th>Item</th>
-                    <th>Status</th>
+                    <th width = "7%">Status</th>
                     <th>Customer Name</th>
                     <th>Shipping Address</th>
                     <th>Customer Email</th>

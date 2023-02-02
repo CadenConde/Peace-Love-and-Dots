@@ -1,0 +1,222 @@
+* {
+    margin: auto;
+    padding: 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+    /*background-color: #CAC8D9;*/
+}
+
+.clearfix {
+    float: none;
+    clear: both;
+}
+
+h2{
+    font-weight: lighter;
+    font-size: 5vw;
+}
+.img-respond {
+    max-width: 20vw;
+    max-height: 15vw;
+    display: inline-block;
+    margin: 2%;
+}
+.img-respond-medium {
+    max-width: 21.5vw;
+    max-height: 16.5vw;
+    display: inline-block;
+    width: 85%;
+    
+}
+.img-respond-small {
+    max-width: 15vw;
+    max-height: 10vw;
+    display: inline-block;
+    margin: none;
+}
+.img-logo {
+    max-width: 15vw;
+    max-height: 10vw;
+    display: inline-block;
+    margin: none;
+}
+.img-respond-big {
+    max-width: 30vw;
+    max-height: 25vw;
+    display: inline-block;
+    margin: 2%;
+}
+.img-curve {
+    border-radius: 5%;
+}
+.left{
+    text-align: left;
+    margin: 1%;
+}
+
+
+/* Navbar Start*/
+.banner-style{
+    width: 40%;
+    height: 30%;
+    text-align: left;
+    padding: 1%;
+}
+.navbar {
+    text-align: center;
+    margin-top: auto;
+}
+
+.navbar ul li {
+    display: inline;
+    font-size: 1.25rem;
+}
+
+.navlink {
+    text-decoration: none;
+    font-weight: bold;
+    color: #827081;
+    padding: 1%;
+    display: inline;
+}
+
+.navlink:hover {
+    color: #011936;
+}
+
+
+/*Start of Pic Wall*/
+
+
+
+
+
+.center {
+    text-align: center;
+}
+
+
+/* Hyperlink */
+
+.btn-hyperlink {
+    border-radius: 7%;
+    background-color: #827081;
+    text-decoration: none;
+    font-weight: bold;
+    color: beige;
+    font-size: 1rem;
+    text-align: center;
+    padding: 1%;
+
+}
+
+.btn-hyperlink:hover{
+    background-color: #011936;
+}
+
+
+/* Footer */
+
+h6{
+    font-weight: lighter;
+    padding: none;
+    font-size: .75rem;
+}
+
+
+
+/* Shop Page */
+
+/* Categories */
+
+small {
+    display: inline-block;
+    font-weight: lighter;
+    font-size: .75rem;
+    padding: 1%;
+    text-align: center;
+}
+
+.extra {
+    vertical-align: top;
+}
+
+/* Order Info */
+
+.ordering {
+    border-right: 1px solid rgb(95, 95, 95);
+    padding: 1%;
+    font-size: 3vw;
+    margin-left: .77%;
+    font-weight: lighter;
+
+}
+
+
+/* Hyperlink */
+
+.btn-hyperlink-second {
+    border-radius: 7%;
+    background-color: #827081;
+    text-decoration: none;
+    font-weight: bold;
+    color: beige;
+    font-size: 1rem;
+    padding: 1%;
+    text-align: left;
+
+}
+
+.btn-hyperlink:hover{
+    background-color: #011936;
+}
+
+/* Sample Products */
+
+.sample-pieces{
+    border: 1px solid black;
+}
+
+/* Float */
+.float{
+    text-align: center;
+    display: inline-block;
+    margin: 0.5vw;
+    width: auto;
+}
+.container{
+    width: 75%;
+    height: 0.5vh;
+    display: inline-block;
+    text-align: center;
+    margin: 11.73%;
+}
+
+/* Rock Table */
+
+.rock-tbl{
+    float: right;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+    padding-top: 10%;
+}
+h5{
+    float: right;
+    font-weight: lighter;
+    font-size: 1vw;
+    padding-top: 3%;
+}
+.section-color{
+    font-size: 1rem;
+    background-color: #17171a;
+}
+
+/* About Page */
+
+/* About Text */
+
+.about-text{
+    margin: 5%;
+    
+}

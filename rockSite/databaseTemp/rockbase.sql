@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 28, 2023 at 04:08 AM
+-- Generation Time: Feb 02, 2023 at 02:59 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -44,6 +44,30 @@ INSERT INTO `login` (`Id`, `Username`, `Password`, `passwordLength`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `orders`
+--
+
+CREATE TABLE `orders` (
+  `order_id` int(11) NOT NULL,
+  `prod_id` int(11) NOT NULL,
+  `status` varchar(255) NOT NULL,
+  `customer_address` varchar(1000) NOT NULL,
+  `customer_email` varchar(255) NOT NULL,
+  `time` datetime NOT NULL DEFAULT current_timestamp(),
+  `customer_first` varchar(100) NOT NULL,
+  `customer_last` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`order_id`, `prod_id`, `status`, `customer_address`, `customer_email`, `time`, `customer_first`, `customer_last`) VALUES
+(2, 13, 'Complete', '123 address', 'address@gmail.com', '2023-01-28 17:32:01', 'cad', 'con');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `products`
 --
 
@@ -52,18 +76,19 @@ CREATE TABLE `products` (
   `Name` varchar(255) NOT NULL,
   `Description` varchar(255) NOT NULL,
   `imageFile` varchar(255) NOT NULL,
-  `Price` double NOT NULL
+  `Price` double NOT NULL,
+  `featured` tinyint(1) NOT NULL,
+  `sold` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`ID`, `Name`, `Description`, `imageFile`, `Price`) VALUES
-(13, 'rock12456', 'hard2', 'Rock7.png', 1.99),
-(15, 'rock', 'rock ', 'Rock5.png', 35),
-(17, '12', '3', 'shop_rock1.png', 3),
-(19, 'my rock', 'massive', 'Rock1.png', 5.66);
+INSERT INTO `products` (`ID`, `Name`, `Description`, `imageFile`, `Price`, `featured`, `sold`) VALUES
+(13, 'rock', 'hard', 'Rock7.png', 1.99, 0, 0),
+(15, 'rock2', 'covered in dots', 'Rock5.png', 3.5, 0, 0),
+(20, 'rock3', 'candle holder', 'Rock8.png', 4, 1, 0);
 
 --
 -- Indexes for dumped tables
@@ -74,6 +99,12 @@ INSERT INTO `products` (`ID`, `Name`, `Description`, `imageFile`, `Price`) VALUE
 --
 ALTER TABLE `login`
   ADD PRIMARY KEY (`Id`);
+
+--
+-- Indexes for table `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`order_id`);
 
 --
 -- Indexes for table `products`
@@ -92,10 +123,16 @@ ALTER TABLE `login`
   MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
