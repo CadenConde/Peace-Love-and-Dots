@@ -12,7 +12,7 @@
             <ul>
                 
                 <li><a href="index.php"><img src="<?php echo SITEURL;?>/images/icons/home.png" alt="Home Icon" width = "50%">
-                <br> Home</a></li>
+                <br>Home</a></li>
                 <br><br><br>
 
                 <li><a href="manage-products.php"><img src="<?php echo SITEURL;?>/images/icons/art-studies.png" alt="Order Icon" width = "50%">

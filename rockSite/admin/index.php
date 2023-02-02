@@ -14,33 +14,23 @@
 
     <div class="main-content">
         <div class="wrapper">
-            <div class = "title"><h1>DASHBOARD</h1></div>
-                    <div class="col-4 text-center">
-                        <h1><?php echo $prodCount?></h1>
-                        Products Available
-                    </div>
-                    <div class="col-4 text-center">
-                        <h1><?php echo $pendCount?></h1>
-                        Pending Orders
-                    </div>
-                    <div class="col-4 text-center">
-                        <h1><?php echo $complCount?></h1>
-                        Completed Orders
-                    </div>
-                <div class="clearfix"></div>
-            
+            <div class = "title"><h1>Home</h1></div>
+            <div class="col-4 text-center">
+                <h1><?php echo $prodCount?></h1>
+                Products Available
+            </div>
+            <div class="col-4 text-center">
+                <h1><?php echo $pendCount?></h1>
+                Pending Orders
+            </div>
+            <div class="col-4 text-center">
+                <h1><?php echo $complCount?></h1>
+                Completed Orders
+            </div>
+            <div class="clearfix"></div> 
         </div>
     </div>
     <body onLoad="addElement();"></body>
     <div id="div1"></div>
     
-    <!--<script>
-        function addElement(){
-            if(Math.floor(Math.random() * 101)>90){
-                location.href = "https://www.pornhub.com/embed/ph5a71e79cb4765";
-            }
-        }
-    </script>-->
-    
-
 <?php include('partials/footer.php'); ?>
