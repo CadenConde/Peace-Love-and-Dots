@@ -1,13 +1,4 @@
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <!--Makes website more resposive-->
-    <meta name="viewport" content="width=device-width" , initial-scale="1.0">
-    <link rel="stylesheet" href="../css/stylesheet.css">
-    <title>Peace, Love, and Dots</title>
-</head>
-
+<?php include('partials/menu.php'); ?>
 <body>
 
     <!--Navbar (Header) Start-->
@@ -145,16 +136,4 @@
     <hr>
     <!-- End of Categories -->
 
-    <!--Footer Start-->
-    <section>
-        <br><br><br><br>
-        <div class="center">
-            <img src="../images/Rock-Dudes-Logo.png" alt="Company Logo" class="img-logo img-curve">
-            <h6>Peace Love and Dots</h6>
-        </div>
-    </section>
-    <!--Footer Ends-->
-    </div>
-</body>
-
-</html>
+    <?php include('partials/footer.php'); ?>

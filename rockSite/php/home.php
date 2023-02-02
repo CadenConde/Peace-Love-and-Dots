@@ -1,14 +1,6 @@
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <!--Makes website more resposive-->
-        <meta name="viewport" content="width=device-width", initial-scale="1.0">
-        <link rel="stylesheet" href="../css/stylesheet.css">
-        <title>The A Tag</title>
-    </head>
+<?php include('partials/menu.php'); ?>
 
     <body>
-        <!--Navbar (Header) Start-->
         <!--Navbar (Header) Start-->
     
     <div>
@@ -73,17 +65,7 @@
             </div>
         </section>
         <hr>
-            <!-- Featured products Ends -->
-
-            <!--Footer Start-->
-        <section>
-            <br><br><br>
-            <div class="center">
-                <img src="../images/Rock-Dudes-Logo.png" alt="Company Logo" class="img-respond-small img-curve ">
-                <h6>Peace Love and Dots</h6>
-            </div>
-        </section>
-            <br><br><br>
-            <!--Footer Ends-->
-    </body>
-</html>
+        
+<?php include('partials/footer.php'); ?>
+            
+        

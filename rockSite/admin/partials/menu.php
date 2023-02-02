@@ -1,5 +1,4 @@
 <?php include('../config/constants.php') ?>
-<?php ?>
 <html>
     <head>
         <title>Rock Website - Home Page </title>
