@@ -1,27 +1,5 @@
 <?php include('partials/menu.php'); ?>
-
-    <div>
-        <img src="../images/rockdudes_banner.png"
-                alt="Heart Rock in cornner with company motto 'peace love and dots next to it'" class="banner-style">
-            </div>
-    <section class="nav section-color">
-        <div class="">
-            <ul>
-                <li>
-                    <a href="home.php" class="navlink">Home</a>
-                </li>
-                <li>
-                    <a href="products.php" class="navlink">Products</a>
-                </li>
-                <li>
-                    <a href="about.php" class="navlink">About</a>
-                </li> 
-            </ul>
-        </div>
-    </section>
-    <!--Navbar End-->
-
-            <!--Image Wall Start-->
+        <!--Image Wall Start-->
         <section>
             <div class="center">
                 <img src="../images/Rock7.png" alt="Mushroom Rock Painted with Rainbow Dots" class="img-respond img-curve">
@@ -29,11 +7,7 @@
                 <img src="../images/Rock8.png" alt="Mushroom Rock Painted with Rainbow Dots" class="img-respond img-curve">
                 <img src="../images/Rock10.png" alt="Mushroom Rock Painted with Rainbow Dots" class="img-respond img-curve">
             </div>
-           
-
-
         </section>
-        <hr>
         <br>
             <!--Image Wall End-->
             

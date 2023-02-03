@@ -1,26 +1,5 @@
 <?php include('partials/menu.php'); ?>
-    <section class="nav section-color">
-        <div class="navbar ">
-            
-                <img src="../images/rockdudes_banner.png"
-                alt="Heart Rock in cornner with company motto 'peace love and dots next to it'" class="banner-style">
-            
-            <ul>
-                <li>
-                    <a href="home.php" class="navlink">Home</a>
-                </li>
-                <li>
-                    <a href="products.php" class="navlink">Products</a>
-                </li>
-                <li>
-                    <a href="about.php" class="navlink">About</a>
-                </li>
-                
-            </ul>
-            
-        </div>
-    </section>
-    <!--Navbar End-->
+    
 
     <!--Start of Banner-->
     <section>

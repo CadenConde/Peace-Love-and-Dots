@@ -57,9 +57,11 @@ if(isset($_POST['submit']))
     if ($res = TRUE)
     {
         echo "Data Inserted";
+        header("location:".SITEURL.'admin/manage-products.php');
     }
     else{
         echo "Failed to Insert Data";
+        header("location:".SITEURL.'admin/manage-products.php');
     }
 
 }

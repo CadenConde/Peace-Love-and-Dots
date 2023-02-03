@@ -5,6 +5,30 @@
     /*background-color: #CAC8D9;*/
 }
 
+
+.wrapper{
+    /* border: 1px solid black;*/
+     padding: 1%;
+     width: 80%;
+     margin: 0 auto;
+}
+.text-center{
+    text-align: center;
+}
+.menu{
+    line-height: 55px;
+}
+.menu ul{
+    list-style-type: none;
+}
+.menu ul li{
+    display: inline;
+    padding: 1%;
+    font-weight: bold;
+}
+
+
+
 .clearfix {
     float: none;
     clear: both;
@@ -61,13 +85,13 @@ h2{
     text-align: left;
     padding: 1%;
 }
-.navbar {
-    text-align: center;
+.navbar{
+    text-align: left;
+    background-color: #9d99b8;
     margin-top: auto;
 }
 
 .navbar ul li {
-    display: inline;
     font-size: 1.25rem;
 }
 
@@ -76,13 +100,22 @@ h2{
     font-weight: bold;
     color: #827081;
     padding: 1%;
-    display: inline;
+    padding-bottom: 5%;
+    text-align: right;
 }
 
 .navlink:hover {
     color: #011936;
 }
 
+
+.headbar{ 
+    background-color: #9d99b8;
+   
+}
+.headbar td th tr{
+    border: 1px solid black; 
+}
 
 /*Start of Pic Wall*/
 
@@ -209,7 +242,6 @@ h5{
 }
 .section-color{
     font-size: 1rem;
-    background-color: #17171a;
 }
 
 /* About Page */
