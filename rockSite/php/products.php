@@ -1,7 +1,4 @@
 <?php include('partials/menu.php'); ?>
-<body>
-
-    <!--Navbar (Header) Start-->
     <section class="nav section-color">
         <div class="navbar ">
             

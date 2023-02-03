@@ -1,8 +1,5 @@
 <?php include('partials/menu.php'); ?>
 
-    <body>
-        <!--Navbar (Header) Start-->
-    
     <div>
         <img src="../images/rockdudes_banner.png"
                 alt="Heart Rock in cornner with company motto 'peace love and dots next to it'" class="banner-style">
@@ -18,7 +15,7 @@
                 </li>
                 <li>
                     <a href="about.php" class="navlink">About</a>
-                </li>
+                </li> 
             </ul>
         </div>
     </section>
