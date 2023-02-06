@@ -12,6 +12,10 @@
         <br><br>
     
         <?php
+            if($_SESSION['timestamp']=="sorry"){
+                echo"<script>alert('Session Timeout: Please Log-In Again');</script>";
+            }
+
             $_SESSION["loggedIn"] = false;
             $sql="SELECT * FROM login;";
 
@@ -33,6 +37,7 @@
                 }
             }
         ?>
+
         <form action="" method="POST">
                 <br>
                 Username:  
@@ -53,6 +58,7 @@
                 $checkPass = md5($_POST['password']);
                 if ($checkPass == $hashedPass && $UsernameIn == $username) {
                     $_SESSION["loggedIn"] = true;
+                    $_SESSION['timestamp'] = time();
                     header("location:" . SITEURL . 'admin/index.php'); 
                 } else {
                     echo "Wrong Credentials";

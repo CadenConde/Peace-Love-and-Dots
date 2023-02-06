@@ -31,11 +31,25 @@
 
 </body>
     <?php
+        if((time() - $_SESSION['timestamp'])> 900) { //subtract new timestamp from the old one
+            //echo"<script>alert('Session Timeout, please log in again');</script>";
+            $_SESSION['loggedIn'] = false;
+            header("location:".SITEURL.'admin/login.php');
+            $_SESSION['timestamp'] = "sorry";
+
+        } 
+
+        else {
+            $_SESSION['timestamp'] = time(); //set new timestamp
+        }
+
         if ($_SESSION["loggedIn"] == null) {
             $_SESSION["loggedIn"] = false;
+
         }
         if ($_SESSION["loggedIn"] == false) {
             header("location:".SITEURL.'admin/login.php');
         }
+        
     ?>
 </html>
