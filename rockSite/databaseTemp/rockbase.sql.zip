@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 02, 2023 at 02:59 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- Generation Time: Feb 06, 2023 at 04:05 PM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -32,7 +32,7 @@ CREATE TABLE `login` (
   `Username` varchar(255) NOT NULL,
   `Password` varchar(255) NOT NULL,
   `passwordLength` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `login`
@@ -56,14 +56,14 @@ CREATE TABLE `orders` (
   `time` datetime NOT NULL DEFAULT current_timestamp(),
   `customer_first` varchar(100) NOT NULL,
   `customer_last` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `orders`
 --
 
 INSERT INTO `orders` (`order_id`, `prod_id`, `status`, `customer_address`, `customer_email`, `time`, `customer_first`, `customer_last`) VALUES
-(2, 13, 'Complete', '123 address', 'address@gmail.com', '2023-01-28 17:32:01', 'cad', 'con');
+(2, 13, 'Pending', '123 address', 'address@gmail.com', '2023-01-28 17:32:01', 'cad', 'con');
 
 -- --------------------------------------------------------
 
@@ -79,16 +79,41 @@ CREATE TABLE `products` (
   `Price` double NOT NULL,
   `featured` tinyint(1) NOT NULL,
   `sold` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `products`
 --
 
 INSERT INTO `products` (`ID`, `Name`, `Description`, `imageFile`, `Price`, `featured`, `sold`) VALUES
-(13, 'rock', 'hard', 'Rock7.png', 1.99, 0, 0),
+(13, 'rock', 'hard', 'Rock7.png', 1.99, 1, 0),
 (15, 'rock2', 'covered in dots', 'Rock5.png', 3.5, 0, 0),
-(20, 'rock3', 'candle holder', 'Rock8.png', 4, 1, 0);
+(20, 'rock3', 'candle holder', 'Rock8.png', 4, 1, 0),
+(75, 'shroooom', 'mushroom', 'shop_rock8.png', 50, 0, 0),
+(76, 'heart rock', 'rock in the shape', 'Rock10.png', 30, 1, 0),
+(77, 'rainbow rocks', 'Rainbow', 'shop_rock7.png', 20, 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `prod_types`
+--
+
+CREATE TABLE `prod_types` (
+  `id` int(11) NOT NULL,
+  `type` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `prod_types`
+--
+
+INSERT INTO `prod_types` (`id`, `type`) VALUES
+(1, 'Candle Holder'),
+(3, 'Heart'),
+(5, 'Mushroom'),
+(7, 'Keychain'),
+(10, 'Misc');
 
 --
 -- Indexes for dumped tables
@@ -113,6 +138,12 @@ ALTER TABLE `products`
   ADD PRIMARY KEY (`ID`);
 
 --
+-- Indexes for table `prod_types`
+--
+ALTER TABLE `prod_types`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -132,7 +163,13 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
+
+--
+-- AUTO_INCREMENT for table `prod_types`
+--
+ALTER TABLE `prod_types`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
