@@ -12,13 +12,12 @@
         <br><br>
     
         <?php
-            if($_SESSION['timestamp']=="sorry"){
-                echo"<script>alert('Session Timeout: Please Log-In Again');</script>";
+            if ($_SESSION["loggedIn"] == 'sorry') {
+                echo "Session Timeout, Please Log-In Again<br><br>";
             }
 
             $_SESSION["loggedIn"] = false;
-            $sql="SELECT * FROM login;";
-
+            $sql = "SELECT * FROM login";
             $res=mysqli_query($conn, $sql);
 
             if ($res==true)
