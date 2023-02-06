@@ -27,9 +27,13 @@
     float: none;
     clear: both;
 }
+
 .tbl-full{
     width: 100%;
 }
+
+
+
 table tr th{
     border-bottom: 1px solid black;
     padding: 3%;
