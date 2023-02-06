@@ -19,7 +19,7 @@
                 <br><br><br>
 
                 <li><a href="manage-types.php"><img src="<?php echo SITEURL;?>/images/icons/menu.png" alt="Types Icon" width = "50%">
-                <br>Types</a></li>
+                <br>Categories</a></li>
                 <br><br><br>
 
                 <li><a href="manage-orders.php"><img src="<?php echo SITEURL;?>/images/icons/box.png" alt="Order Icon" width = "50%">
@@ -41,7 +41,7 @@
             $_SESSION['timestamp'] = time();
         }
 
-        else if((time() - $_SESSION['timestamp'])> 5) { //subtract new timestamp from the old one
+        else if((time() - $_SESSION['timestamp'])> 900) { //subtract new timestamp from the old one
             echo"<script>alert('Session Timeout: Please Log-In Again');</script>";
             $_SESSION["loggedIn"] = "sorry";
             header("location:".SITEURL.'admin/login.php');

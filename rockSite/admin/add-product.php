@@ -12,11 +12,30 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Description: </td>
-                    <td> 
-                        <input type="text" name="description" placeholder="Description">
-                    </td>
-                </tr>
+                        <td>Category: </td>
+                        <td> 
+                            <?php
+                                $sql="SELECT * FROM prod_types";
+                                $res=mysqli_query($conn, $sql);
+                                if ($res==true)
+                                    {
+                                        $count = mysqli_num_rows($res);
+                                        if ($count>=1){
+                                            while ($rows = mysqli_fetch_assoc($res)) {
+                                                $tid = $rows['id'];
+                                                $type = $rows['type'];
+                                                if ($type == "Misc") {
+                                                    echo '<input type="radio" id="'.$tid.'" name="type" checked="checked" value="'.$type.'"><label for="'.$type.'">'.$type.'</label><br>';
+                                                } else {
+                                                    echo '<input type="radio" id="'.$tid.'" name="type" value="'.$type.'"><label for="'.$type.'">'.$type.'</label><br>';
+                                                }
+                                            }
+                                        }
+                                    }
+
+                            ?>
+                        </td>
+                    </tr>
                 <tr>
                     <td>Image File: </td>
                     <td> 
@@ -46,7 +65,10 @@
 if(isset($_POST['submit']))
 {
     $Name = $_POST['Name'];
-    $description = $_POST['description'];
+    $description = $_POST['type'];
+    if ($description == null) {
+        $description = 'Misc';
+    }
     $image = $_POST['image'];
     $price = $_POST['price'];
 

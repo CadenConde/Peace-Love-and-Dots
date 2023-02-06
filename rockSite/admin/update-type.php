@@ -22,6 +22,7 @@
 
                         $id = $row['id'];
                         $type=$row['type'];
+                        $oldType = $row['type'];
                     }
                     else{
                         header('location:'.SITEURL.'admin/manage-types.php');
@@ -56,8 +57,11 @@ if(isset($_POST['submit']))
 
     $type = $_POST['type'];
     
-
     $sql = "UPDATE prod_types SET type = '$type' WHERE id = $id;";
+
+    $res = mysqli_query($conn, $sql) or die();
+
+    $sql = "UPDATE products SET Description = '$type' WHERE Description = '$oldType';";
 
     $res = mysqli_query($conn, $sql) or die();
 

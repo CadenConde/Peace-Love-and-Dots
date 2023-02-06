@@ -24,7 +24,7 @@
                 <tr>
                     <th width = '20%'>Product Image</th>
                     <th width = '10%'>Product Name</th>
-                    <th width = '10%'>Product Type</th>
+                    <th width = '10%'>Product Category</th>
                     <th width = '10%'>Price</th>
                     <th width = '10%'>Featured</th>
                     <th width = '10%'>Sold</th>

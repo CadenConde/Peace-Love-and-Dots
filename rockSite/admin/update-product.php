@@ -40,12 +40,34 @@
                             <input type="text" name="Name" value="<?php echo $prod_name?>">
                         </td>
                     </tr>
+
                     <tr>
-                        <td>New Description: </td>
+                        <td>New Category: </td>
                         <td> 
-                            <input type="text" name="description" value="<?php echo $prod_descr?>">
+                            <?php
+                                $sql="SELECT * FROM prod_types";
+                                $res=mysqli_query($conn, $sql);
+                                if ($res==true)
+                                    {
+                                        $count = mysqli_num_rows($res);
+                                        if ($count>=1){
+                                            while ($rows = mysqli_fetch_assoc($res)) {
+                                                $tid = $rows['id'];
+                                                $type = $rows['type'];
+                                                if($type == $prod_descr){
+                                                    echo '<input type="radio" id="'.$tid.'" name="type" checked="checked" value="'.$type.'"><label for="'.$type.'">'.$type.'</label><br>';
+                                                }
+                                                else{
+                                                    echo '<input type="radio" id="'.$tid.'" name="type" value="'.$type.'"><label for="'.$type.'">'.$type.'</label><br>';
+                                                }
+                                            }
+                                        }
+                                    }
+
+                            ?>
                         </td>
                     </tr>
+
                     <tr>
                         <td>New Image File: </td>
                         <td> 
@@ -77,17 +99,21 @@
 
 if(isset($_POST['submit']))
 {
-
+    
     $Name = $_POST['Name'];
-    $description = $_POST['description'];
+    $desc = $_POST['type'];
+    if ($desc == null) {
+        $desc = 'Misc';
+    }
+    
     $image = $_POST['image'];
     if ($image == null) {
         $image = $row['imageFile'];
     }
     $price = $_POST['price'];
-
-    $sql = "UPDATE products SET Name = '$Name', Description = '$description', imageFile = '$image', price = '$price' WHERE ID = $id;";
-
+    
+    $sql = "UPDATE products SET Name = '$Name', Description = '$desc', imageFile = '$image', price = '$price' WHERE ID = $id;";
+    
     $res = mysqli_query($conn, $sql) or die();
 
     if ($res = TRUE)

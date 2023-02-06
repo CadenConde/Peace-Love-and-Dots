@@ -2,7 +2,7 @@
     <div class="main-content">
         <div class="wrapper">
 
-            <div class = "title"><h1>Manage Types</h1></div>
+            <div class = "title"><h1>Manage Categories</h1></div>
             <br>
 
             
@@ -10,9 +10,8 @@
 
             <table class= "tbl-full">
                 <tr>
-                    <th>Type</th>
-                    <th>Edit Type</th>
-                    <th>Remove Type</th>
+                    <th>Category</th>
+                    <th>Manage</th>
                 </tr>
 
                 <?php 
@@ -33,10 +32,8 @@
                                     <td width = "20%"><?php echo $type;?></td>
                                     
                                     <td width = '20%'>
-                                        <button onclick="editType(<?php echo $id;?>)" class="btn-secondary">Edit Type</button>
-                                    </td>
-                                    <td width = '20%'>
-                                        <button onclick="removeType(<?php echo $id;?>)" class="btn-third">Remove Type</button>
+                                        <button onclick="editType(<?php echo $id;?>)" class="btn-secondary">Edit</button>
+                                        <button onclick="removeType(<?php echo $id;?>)" class="btn-third">Remove</button>
                                     </td>
                                 </tr>
                                 <?php
