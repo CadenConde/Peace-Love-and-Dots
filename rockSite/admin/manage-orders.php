@@ -4,19 +4,12 @@
 
             <div class = "title"><h1>Manage Orders</h1></div>
             <br>
-
-            <?php
-                if(isset($_SESSION['delete']))
-                {
-                    unset($_SESSION['delete']);
-                }
-            ?>
             <br><br>
 
             <table class= "tbl-full">
                 <tr>
                     <th>Item</th>
-                    <th width = "7%">Status</th>
+                    <th width = "10%">Status</th>
                     <th>Customer Name</th>
                     <th>Shipping Address</th>
                     <th>Customer Email</th>
