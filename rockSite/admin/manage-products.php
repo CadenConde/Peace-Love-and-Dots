@@ -20,15 +20,15 @@
             
             <br><br>
 
-            <table class= "tbl-full">
+            <table class ="tbl-full">
                 <tr>
-                    <th>Product Image</th>
-                    <th>Product Name</th>
-                    <th>Product Description</th>
-                    <th>Price</th>
-                    <th>Featured</th>
-                    <th>Sold</th>
-                    <th>Actions</th>
+                    <th width = '20%'>Product Image</th>
+                    <th width = '10%'>Product Name</th>
+                    <th width = '10%'>Product Type</th>
+                    <th width = '10%'>Price</th>
+                    <th width = '10%'>Featured</th>
+                    <th width = '10%'>Sold</th>
+                    <th width = '20%'>Actions</th>
                 </tr>
 
                 <?php 
@@ -52,19 +52,25 @@
                                
                                 <tr>
                                     <td width = "20%"><img src="<?php echo SITEURL;?>/images/<?php echo $image; ?>" alt="<?php echo $prod_descr; ?>" width = "90%"></td>
+
                                     <td><?php echo $prod_name;?></td>
+
                                     <td><?php echo $prod_descr;?></td>
+
                                     <td> $<?php echo $price;?></td>
+
                                     <td><?php if ($featured == 1) {
                                         echo "Yes";
                                     } else {
                                         echo "No";
                                     }?></td>
+
                                     <td><?php if ($sold == 1) {
                                         echo "Yes";
                                     } else {
                                         echo "No";
                                     }?></td>
+
                                     <td width = '20%'>
                                         <button onclick="updateProd(<?php echo $id;?>)" class="btn-secondary">Update</button><br>
                                         <button onclick="removeProd(<?php echo $id;?>)" class="btn-third">Remove</button><br>
