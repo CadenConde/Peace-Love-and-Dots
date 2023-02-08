@@ -3,7 +3,7 @@
     <div class="wrapper">
         <h1>Add Product</h1>
         <br><br>
-        <form action="" method="POST">
+        <form action="" method="POST" enctype="multipart/form-data">
             <table class="tbl-30">
                 <tr>
                     <td>Rock Name: </td>
@@ -72,7 +72,30 @@ if(isset($_POST['submit']))
     $image = $_POST['image'];
     $price = $_POST['price'];
 
-    $sql = "INSERT INTO `products` (`ID`, `Name`, `Description`, `imageFile`, `Price`) VALUES (NULL, '$Name', '$description', '$image', '$price')";
+    if(isset($_FILES['image']['name']))
+        {
+            //upload the image
+            $image_name = $_FILES['image']['name'];
+            $source_path = $_FILES['image']['tmp_name'];
+            $destination_path = "../images/".$image_name;
+            
+            //Upload the image
+            $upload = move_uploaded_file($source_path, $destination_path);
+
+            //check to see if the image is uploaded or not, and if it is not then we will stop the procces and redirect to error.
+            if($upload == false)
+            {
+                die();
+            }
+            
+        }
+        else
+        {
+            //don't upload anything and set the image_name cvalue as blank
+            $image_name = "";
+        }
+
+    $sql = "INSERT INTO `products` (`ID`, `Name`, `Description`, `imageFile`, `Price`) VALUES (NULL, '$Name', '$description', '$image_name', '$price')";
 
     $res = mysqli_query($conn, $sql) or die();
 

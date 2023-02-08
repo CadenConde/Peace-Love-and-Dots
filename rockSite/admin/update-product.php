@@ -32,7 +32,7 @@
                 }
             ?>
 
-            <form action="" method="POST">
+            <form action="" method="POST" enctype="multipart/form-data">
                 <table class="tbl-30">
                     <tr>
                         <td>New Name: </td>
@@ -106,13 +106,34 @@ if(isset($_POST['submit']))
         $desc = 'Misc';
     }
     
-    $image = $_POST['image'];
-    if ($image == null) {
-        $image = $row['imageFile'];
-    }
     $price = $_POST['price'];
+    $image_name = $image;
+
+    if(isset($_FILES['image']['name']))
+    {
+        //upload the image
+        $image_name = $_FILES['image']['name'];
+        $source = $_FILES['image']['tmp_name'];
+        $destination = "../images/".$image_name;
+        
+        //Upload the image
+        $upload = move_uploaded_file($source, $destination);
+
+        //check to see if the image is uploaded or not, and if it is not then we will stop the procces and redirect to error.
+    }
+    else
+    {
+        //don't upload anything and set the image_name cvalue as blank
+        $image_name = $image;
+    }
     
-    $sql = "UPDATE products SET Name = '$Name', Description = '$desc', imageFile = '$image', price = '$price' WHERE ID = $id;";
+    if($image_name == ""){
+        $sql = "UPDATE products SET Name = '$Name', Description = '$desc', price = '$price' WHERE ID = $id;";
+    }
+    else{
+        $sql = "UPDATE products SET Name = '$Name', Description = '$desc', imageFile = '$image_name', price = '$price' WHERE ID = $id;";
+    }
+    
     
     $res = mysqli_query($conn, $sql) or die();
 
@@ -122,6 +143,7 @@ if(isset($_POST['submit']))
     }
     else{
         echo "Failed to Insert Data";
+        
     }
 
 }
