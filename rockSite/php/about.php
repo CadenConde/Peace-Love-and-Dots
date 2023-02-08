@@ -6,6 +6,7 @@
     <!--About Info Starts-->
    <section>
         <div class="left">
+            <br><br>
             <h2>About Me!</h2>
         </div>
         <div>

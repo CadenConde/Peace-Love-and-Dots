@@ -1,50 +1,13 @@
-<html lang="en">
+<?php include('partials/menu.php'); ?>
 
-<head>
-    <meta charset="UTF-8">
-    <!--Makes website more resposive-->
-    <meta name="viewport" content="width=device-width" , initial-scale="1.0">
-    <link rel="stylesheet" href="../css/stylesheet.css">
-    <title>Peace, Love, and Dots</title>
-</head>
+<!DOCTYPE html>
 
-<body>
-
-    <!--Navbar (Header) Start-->
-    <section class="nav section-color">
-        <div class="navbar ">
-            
-                <img src="../images/rockdudes_banner.png"
-                alt="Heart Rock in cornner with company motto 'peace love and dots next to it'" class="banner-style">
-            
-            <ul>
-                <li>
-                    <a href="home.php" class="navlink">Home</a>
-                </li>
-                <li>
-                    <a href="products.php" class="navlink">Products</a>
-                </li>
-                <li>
-                    <a href="about.php" class="navlink">About</a>
-                </li>
-                
-            </ul>
-            
-        </div>
-    </section>
-    <!--Navbar End-->
-
-    <!--Start of Banner-->
-    <section>
-        <div class="center">
-            
-        </div>
-    </section>
-    <!--End of Banner-->
-
+<html>
+<body class="center">
+    <br><br><br><br><br><br><br><br>
     <!--Start of Categories-->
     <section>
-        <table>
+        <table class="rock-tbl">
             <tr>
                 <td>
                     <img src="../images/shop_rock4.png" class="img-curve img-respond-medium " alt="Ornamant on tree">
@@ -78,7 +41,7 @@
     <br><br>
     <!--Start of example Products-->
 <section>
-    <table>
+    <table class="products-tbl">
         <tr>
             <td>
                 <img src="../images/shop_rock5.png" alt="Black blue and purple candle holder" class="img-respond-small img-curve">
@@ -122,7 +85,6 @@
         <br><br><br><br>
         <div class="center">
             <img src="../images/Rock-Dudes-Logo.png" alt="Company Logo" class="img-logo img-curve">
-            <h6>Peace Love and Dots</h6>
         </div>
     </section>
     <!--Footer Ends-->

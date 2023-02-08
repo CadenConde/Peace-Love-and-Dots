@@ -1,9 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
 * {
-    margin: auto;
     padding: 0 0;
-    font-family: Arial, Helvetica, sans-serif;
-    /*background-color: #CAC8D9;*/
+    font-family: 'Trebuchet MS', Montserrat, Arial, Helvetica, sans-serif;
 }
+
+html {
+    min-width: 550px;
+}
+
+@keyframes hamimation {
+    100% {background-color: #895f9b;}
+}
+
+/* NAVBAR SECTION */
+
+.banner {
+    width: 350px;
+    top: 0;
+}
+
+.navbar {
+    width: 100%;
+    position: fixed;
+    background-color: #b485c8;
+    border-bottom: 2px solid black;
+    display: flex;
+    align-items: center;
+}
+
+.navlinks a {
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 3%;
+    font-size: 30px;
+    border-radius: 10px;
+    padding: 1%;
+    color: rgb(119, 30, 115);
+}
+
+.navlinks a:hover, .navbar a:focus {
+    color: rgb(50, 7, 48);
+    animation-name: hamimation;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+}
+
+.navlinks {
+    width: 100%;
+    text-align: right;
+    float: right;
+}
+
+.menu {
+    position: absolute;
+    right: 20px;
+}
+
+.menu-lines {
+    display: none;
+}
+
+.hamburger {
+    width: 63px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+}
+
+.ham-line {
+    width: 50px;
+    height: 10px;
+    margin: 10%;
+    background-color: rgb(60, 7, 58);
+    border-radius: 5px;
+    pointer-events: none;
+}
+
+@media (max-width: 750px) {
+    .navlinks {
+        display: none;
+    }
+
+    .menu-lines {
+        display: inline-block;
+        position: relative;
+    }
+}
+
+.hamburger:hover, .hamburger:focus {
+    cursor: pointer;
+    animation-name: hamimation;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(141, 47, 148);
+    min-width: 120px;
+    z-index: 1;
+    right: 0;
+    border: 1px outset rgb(54, 7, 59);
+    border-radius: 5px;
+    box-shadow: 1px 1px 6px rgb(70, 19, 82);
+}
+
+.dropdown-content a {
+    font-weight: bolder;
+    padding: 12px 12px;
+    color: rgb(65, 13, 62);
+    text-decoration: none;
+    display: block;
+    border-radius: inherit;
+    text-align: right;
+}
+
+.dropdown-content a:hover, .dropdown-content a:focus {
+    background-color: rgb(90, 22, 96);
+    color: rgb(201, 99, 222);
+}
+
+.dropdown-img {
+    width: 25px;
+    height: 25px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 4px;
+    pointer-events: none;
+}
+
+.show {
+    display: inline-block;
+}
+
+/* END OF NAVBAR SECTION */
 
 
 .wrapper{
@@ -12,22 +145,6 @@
      width: 80%;
      margin: 0 auto;
 }
-.text-center{
-    text-align: center;
-}
-.menu{
-    line-height: 55px;
-}
-.menu ul{
-    list-style-type: none;
-}
-.menu ul li{
-    display: inline;
-    padding: 1%;
-    font-weight: bold;
-}
-
-
 
 .clearfix {
     float: none;
@@ -57,12 +174,6 @@ h2{
     display: inline-block;
     margin: none;
 }
-.img-logo {
-    max-width: 15vw;
-    max-height: 10vw;
-    display: inline-block;
-    margin: none;
-}
 .img-respond-big {
     max-width: 30vw;
     max-height: 25vw;
@@ -77,51 +188,7 @@ h2{
     margin: 1%;
 }
 
-
-/* Navbar Start*/
-.banner-style{
-    width: 40%;
-    height: 30%;
-    text-align: left;
-    padding: 1%;
-}
-.navbar{
-    text-align: left;
-    background-color: #9d99b8;
-    margin-top: auto;
-}
-
-.navbar ul li {
-    font-size: 1.25rem;
-}
-
-.navlink {
-    text-decoration: none;
-    font-weight: bold;
-    color: #827081;
-    padding: 1%;
-    padding-bottom: 5%;
-    text-align: right;
-}
-
-.navlink:hover {
-    color: #011936;
-}
-
-
-.headbar{ 
-    background-color: #9d99b8;
-   
-}
-.headbar td th tr{
-    border: 1px solid black; 
-}
-
 /*Start of Pic Wall*/
-
-
-
-
 
 .center {
     text-align: center;
@@ -154,8 +221,6 @@ h6{
     padding: none;
     font-size: .75rem;
 }
-
-
 
 /* Shop Page */
 
@@ -227,13 +292,16 @@ small {
 /* Rock Table */
 
 .rock-tbl{
-    float: right;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1%;
-    padding-top: 10%;
+    display: flex;
+    justify-content: center;
 }
+
+.products-tbl {
+    display: flex;
+    justify-content: right;
+    margin-right: 10%;
+}
+
 h5{
     float: right;
     font-weight: lighter;
@@ -246,9 +314,6 @@ h5{
 
 /* About Page */
 
-/* About Text */
-
 .about-text{
     margin: 5%;
-    
 }
