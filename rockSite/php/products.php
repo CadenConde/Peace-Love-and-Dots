@@ -41,8 +41,53 @@
     <br><br>
     <!--Start of example Products-->
 <section>
-    <table class="products-tbl">
-        <tr>
+    <table>
+    <?php 
+                    $sql = "SELECT * FROM products";
+                    $res = mysqli_query($conn, $sql);
+                    if ($res==TRUE)
+                    {
+                        $count = mysqli_num_rows($res);
+                        if ($count>0)
+                        {
+                            while($rows=mysqli_fetch_assoc($res))
+                            {
+                                $id = $rows['ID'];
+                                $prod_name=$rows['Name'];
+                                $prod_descr=$rows['Description'];
+                                $image=$rows['imageFile'];
+                                $price=number_format($rows['Price'], 2);
+                                
+                                ?>
+                               
+                                <tr>
+                                    <td width = "20%"><img src="<?php echo SITEURL;?>/images/<?php echo $image; ?>" alt="<?php echo $prod_descr; ?>" width = "90%"></td>
+
+                                    <td><?php echo $prod_name;?></td>
+
+
+                                    <td> $<?php echo $price;?></td>
+
+                                    <td width = '20%'>
+                                        <button onclick="orderProd(<?php echo $id;?>)" class="btn-secondary">Order</button><br>
+                                    </td>
+                                </tr>
+                                <?php
+                            }
+                        } else {
+                            echo "<tr>no products found</tr>";
+                        }
+                    }
+                ?>
+            
+            
+
+
+
+
+
+        <!--
+            <tr>
             <td>
                 <img src="../images/shop_rock5.png" alt="Black blue and purple candle holder" class="img-respond-small img-curve">
                 <h5><small>Blue & Gray Candle<br>Holder</small></h5>
@@ -74,8 +119,14 @@
                 <h5><small>Green & Blue<br>on Painted<br>Candle Holder</small></h5>
             </td>
         </tr>
+        -->
     </table>
 </section>
+        <script>
+            function orderProd(id=0) {
+                location.href = "order.php?id=" + id;
+            }
+        </script>
 <br><br>
     <hr>
     <!-- End of Categories -->

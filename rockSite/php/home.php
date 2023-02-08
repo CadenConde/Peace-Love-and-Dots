@@ -11,6 +11,7 @@
         <!--Image Wall Start-->
         <br><br><br><br><br><br><br>
         <section>
+           <h2>Featured Items</h2> 
             <img src="../images/Rock7.png" alt="Mushroom Rock Painted with Rainbow Dots" class="img-respond img-curve">
             <img src="../images/Rock9.png" alt="Mushroom Rock Painted with Rainbow Dots" class="img-respond img-curve">
             <img src="../images/Rock8.png" alt="Mushroom Rock Painted with Rainbow Dots" class="img-respond img-curve">
@@ -19,13 +20,37 @@
         <br>
         <!-- Featured products Start -->
         <br><br>
+        
         <section>
-            <h2>Featured Section</h2>
-            <img src="../images/Rock4.png" alt="5 colored ornaments in a circle" class="img-respond-big img-curve img-curve">
-            <img src="../images/Rock6.png" alt="Pink Green and White Marbled Rock in Hand" class="img-respond-big img-curve img-curve">
-            <img src="../images/Rock1.png" alt="Hand Holding a Black Rock Painted in Rainbow" class="img-respond img-curve img-curve">
-            <img src="../images/Rock2.png" alt="Hand Holding a Black Rock Painted in Purple and green" class="img-respond img-curve img-curve">
-            <img src="../images/Rock3.png" alt="Black Painted Heart Rock with Rainbow Colors" class="img-respond img-curve img-curve">
+                <table width = 33%>
+                <?php 
+                    $sql = "SELECT * FROM products WHERE featured = '1';";
+                    $res = mysqli_query($conn, $sql);
+                    if ($res==TRUE)
+                    {
+                        $count = mysqli_num_rows($res);
+                        if ($count>0)
+                        {
+                            $counter = 0;
+                            while($rows=mysqli_fetch_assoc($res))
+                            {
+                                $id = $rows['ID'];
+                                $prod_name=$rows['Name'];
+                                $prod_descr=$rows['Description'];
+                                $image=$rows['imageFile'];
+                                $price=number_format($rows['Price'], 2);
+                                ?>
+                                <tr>
+                                    <td width = "20%"><img src="<?php echo SITEURL;?>/images/<?php echo $image; ?>" alt="<?php echo $prod_descr; ?>" width = "90%"></td>
+                                </tr>
+                                <?php
+                            }
+                        } else {
+                            echo "<tr>no featured items found</tr>";
+                        }
+                    }
+                ?>
+                </table>
         </section>
         <hr>
     </div>
