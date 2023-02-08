@@ -131,15 +131,10 @@
     <hr>
     <!-- End of Categories -->
 
-    <!--Footer Start-->
-    <section>
-        <br><br><br><br>
-        <div class="center">
-            <img src="../images/Rock-Dudes-Logo.png" alt="Company Logo" class="img-logo img-curve">
-        </div>
-    </section>
-    <!--Footer Ends-->
+    
     </div>
 </body>
 
 </html>
+
+<?php include(partials/footer.php)?>
