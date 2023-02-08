@@ -13,6 +13,23 @@ html {
 @keyframes hamimation {
     100% {background-color: #895f9b;}
 }
+/*products buttons*/
+
+.btn-secondary{
+    background-color: #68BBE3;
+    margin-top: 2px;
+    padding: 2%;
+    padding-left: 4%;
+    padding-right: 4%;
+    color: #2d3436;
+    text-decoration: none;
+    font-weight: lighter;
+    border-radius: 5px;
+}
+.btn-secondary:hover{
+    background-color: #51b0df;
+}
+
 
 /* NAVBAR SECTION */
 
