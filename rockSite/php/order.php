@@ -72,6 +72,12 @@
                             </td>
                         </tr>
                         <tr>
+                            <td>Country</td>
+                            <td> 
+                                <input type="text" name="country" placeholder="e.g. United States">
+                            </td>
+                        </tr>
+                        <tr>
                             <td colspan="2">
                                 <input type="submit" name="submit" value="Proceed to Checkout" class="btn-secondary">
                             </td>
@@ -88,10 +94,30 @@
         $address1 = $_POST['line1'];
         $address2 = $_POST['line2'];
         $address3 = $_POST['city'] . " " . $_POST['state'] . " " . $_POST['zip'];
-        $vars = "?prod_id=$id&fname=$fname&lname=$lname&email=$email&address1=$address1&address2=$address2&address3=$address3";
-
-        echo '<script type="text/javascript">function jsFunction(){location.href = "send-order.php'.$vars.'";}</script>';
-        echo '<script type="text/javascript">jsFunction();</script>'; //things broke so i cheated the link
+        $address4 = $_POST['country'];
+        if($fname == ""){
+            echo "Please enter your name";
+        }
+        else if($lname == ""){
+            echo "Please enter your name";
+        }
+        else if($email == ""){
+            echo "Please enter your email";
+        }
+        else if($address1 == ""){
+            echo "Please enter your full address";
+        }
+        else if( $_POST['city'] == "" || $_POST['state'] == "" || $_POST['zip'] == ""){
+            echo "Please enter your full address";
+        }
+        else if( $address4 == ""){
+            echo "Please enter your full address";
+        }
+        else{
+            $vars = "?prod_id=$id&fname=$fname&lname=$lname&email=$email&address1=$address1&address2=$address2&address3=$address3&address4=$address4";
+            echo '<script type="text/javascript">function jsFunction(){location.href = "order2.php'.$vars.'";}</script>';
+            echo '<script type="text/javascript">jsFunction();</script>'; //things broke so i cheated the link
+        }
 
     }
 
