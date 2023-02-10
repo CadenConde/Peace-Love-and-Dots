@@ -79,7 +79,7 @@
             
             // Full available details
             console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
-
+s
             // Show a success message within this page, e.g.
             const element = document.getElementById('paypal-button-container');
             element.innerHTML = '';
@@ -100,15 +100,11 @@
 
     <script>
         function sendOrder(){
-            location.href = "send-order.php'.<?php echo $vars?>.'";
+            location.href = "send-order.php<?php echo $vars?>";
         }
     </script>
 
 
-
-
-
-
-    <?php include('partials/footer.php');?>
+    <button onclick="sendOrder()" class="btn-secondary">Temp Button</button><br>
 
 

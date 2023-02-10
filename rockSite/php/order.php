@@ -54,25 +54,25 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>City</td>
+                            <td>City:</td>
                             <td> 
                                 <input type="text" name="city" placeholder="e.g. New York">
                             </td>
                         </tr>
                         <tr>
-                            <td>State</td>
+                            <td>State:</td>
                             <td> 
                                 <input type="text" name="state" placeholder="e.g. NY">
                             </td>
                         </tr>
                         <tr>
-                            <td>Zip Code</td>
+                            <td>Zip Code:</td>
                             <td> 
                                 <input type="text" name="zip" placeholder="e.g. 12345">
                             </td>
                         </tr>
                         <tr>
-                            <td>Country</td>
+                            <td>Country:</td>
                             <td> 
                                 <input type="text" name="country" placeholder="e.g. United States">
                             </td>
@@ -93,7 +93,7 @@
         $email = $_POST['email'];
         $address1 = $_POST['line1'];
         $address2 = $_POST['line2'];
-        $address3 = $_POST['city'] . " " . $_POST['state'] . " " . $_POST['zip'];
+        $address3 = $_POST['city'] . ", " . $_POST['state'] . " " . $_POST['zip'];
         $address4 = $_POST['country'];
         if($fname == ""){
             echo "Please enter your name";

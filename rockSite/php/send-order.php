@@ -9,16 +9,19 @@
     $time = time();
     $id = $_GET['prod_id'];
 
-    $sql = "INSERT INTO `orders` (`order_id`, `prod_id`, `status`, `customer_address`, `customer_email`, `time`, `customer_first`, `customer_last`) VALUES (NULL, '$id', 'Pending', '$address', '$email', $time, $fname, $lname)";
-
+    $sql = "INSERT INTO `orders` (`order_id`, `prod_id`, `status`, `customer_address`, `customer_email`, `time`, `customer_first`, `customer_last`) VALUES (NULL, '$id', 'Pending', '$address', '$email',current_timestamp() , '$fname', '$lname')";
+    //echo $sql;
     $res = mysqli_query($conn, $sql);
 
     if ($res==true)
     {
-        header("location:".SITEURL.'php/home.php');
+        
+        $sql = "UPDATE products SET sold = '1' WHERE ID = $id";
+        $res = mysqli_query($conn, $sql);
+        header("location:".SITEURL.'php/thanks.php');
     }
     else{
         echo "error sending order"; 
     }
-        
+
 ?>
