@@ -39,7 +39,7 @@
 <section>
     <table>
     <?php 
-        $sql = "SELECT * FROM products";
+        $sql = "SELECT * FROM products WHERE sold = 0";
         $res = mysqli_query($conn, $sql);
         if ($res==TRUE)
         {
