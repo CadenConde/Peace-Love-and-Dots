@@ -1,7 +1,17 @@
 <?php include('partials/menu.php'); ?>
+   <div class="center">
     <br><br><br><br><br><br>
-    <h2 style = "text-align: center;">Thanks for Ordering!</h2>
-    <br><br><br><br><br><br><br><br><br>
-    
-    
+    <h2>Thanks for Ordering!</h2>
+    <br><br>
+
+    <script>
+        function homePg(){
+            location.href = "home.php";
+        }
+    </script>
+
+
+    <button onclick="homePg()" class="btn-secondary">Back to Home Page</button><br>
+    </div>
+    <br><br><br>
    <?php include('partials/footer.php'); ?>
