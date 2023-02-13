@@ -35,6 +35,7 @@
 
 </body>
     <?php
+        
         if ($_SESSION["loggedIn"] == null) {
             header("location:".SITEURL.'admin/login.php');
             $_SESSION["loggedIn"] = false;
@@ -53,9 +54,7 @@
 
         else {
             $_SESSION['timestamp'] = time();
-        }
-
-        
+        } 
         
     ?>
 </html>

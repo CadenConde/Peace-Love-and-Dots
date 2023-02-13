@@ -25,6 +25,7 @@
                         $prod_descr=$row['Description'];
                         $image=$row['imageFile'];
                         $price = $row['Price'];
+                        $sold = $row['sold'];
                     }
                     else{
                         header('location:'.SITEURL.'admin/manage-products.php');
@@ -84,6 +85,14 @@
                         </td>
                     </tr>
                     <tr>
+                        <td>Sold: </td>
+                        <td> 
+                            <input type="checkbox" name="sold" <?php if($sold == 1){
+                                echo 'checked = "checked"';
+                            } ?>>
+                        </td>
+                    </tr>
+                    <tr>
                         <td colspan="2">
                             <input type="submit" name="submit" value="Save" class="btn-secondary">
                         </td>
@@ -92,9 +101,7 @@
             </form>
         </div>    
     </div>
-
-<?php include('partials/footer.php'); ?>
-
+    
 <?php
 
 if(isset($_POST['submit']))
@@ -104,6 +111,12 @@ if(isset($_POST['submit']))
     $desc = $_POST['type'];
     if ($desc == null) {
         $desc = 'Misc';
+    }
+    if(isset($_POST['sold'])){
+        $sold = '1';
+    }
+    else{
+        $sold = '0';
     }
     
     $price = $_POST['price'];
@@ -128,14 +141,14 @@ if(isset($_POST['submit']))
     }
     
     if($image_name == ""){
-        $sql = "UPDATE products SET Name = '$Name', Description = '$desc', price = '$price' WHERE ID = $id;";
+        $sql = "UPDATE products SET Name = '$Name', sold = '$sold', Description = '$desc', price = '$price' WHERE ID = $id;";
     }
     else{
-        $sql = "UPDATE products SET Name = '$Name', Description = '$desc', imageFile = '$image_name', price = '$price' WHERE ID = $id;";
+        $sql = "UPDATE products SET Name = '$Name', sold = '$sold', Description = '$desc', imageFile = '$image_name', price = '$price' WHERE ID = $id;";
     }
     
     
-    $res = mysqli_query($conn, $sql) or die();
+    $res = mysqli_query($conn, $sql);
 
     if ($res = TRUE)
     {
@@ -143,8 +156,9 @@ if(isset($_POST['submit']))
     }
     else{
         echo "Failed to Insert Data";
-        
     }
 
 }
 ?>
+
+<?php include('partials/footer.php'); ?>
