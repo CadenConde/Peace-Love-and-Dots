@@ -2,3 +2,4 @@ w3schools
 favicon
 stack overflow
 https://blog.hubspot.com/website/html-dropdown
+https://coolcssanimation.com/how-to-trigger-a-css-animation-on-scroll/
