@@ -13,6 +13,12 @@ html {
 @keyframes hamimation {
     100% {background-color: #895f9b;}
 }
+
+@keyframes scroll-anim {
+    50% {opacity: 50%}
+    100%{opacity: 100%}
+}
+
 /*products buttons*/
 
 .btn-secondary{
@@ -151,6 +157,13 @@ html {
 
 .show {
     display: inline-block;
+}
+
+.img-smooth {
+    animation-name: scroll-anim;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 /* END OF NAVBAR SECTION */
