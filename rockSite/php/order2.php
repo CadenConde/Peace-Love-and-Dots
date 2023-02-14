@@ -103,7 +103,7 @@
         }
     </script>
 
-      <div class="center">
+      <div class="center"> <!-- this is temporary -->
             <button onclick="sendOrder()" class="btn-secondary">Temp Button</button><br>
       </div>
 
