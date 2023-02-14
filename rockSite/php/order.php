@@ -68,7 +68,7 @@
                         <tr>
                             <td>Zip Code:</td>
                             <td> 
-                                <input type="text" name="zip" placeholder="e.g. 12345">
+                                <input type="number" name="zip" placeholder="e.g. 12345">
                             </td>
                         </tr>
                         <tr>
