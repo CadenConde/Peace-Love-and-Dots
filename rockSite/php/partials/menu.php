@@ -14,7 +14,7 @@
     <img src="../images/rockdudes_banner.png" alt="Heart Rock in cornner with company motto 'peace love and dots' next to it" class="banner">
     <div class="navlinks">
         <a href="home.php">Home</a>
-        <a href="products.php">Products</a>
+        <a href="products.php">Shop</a>
         <a href="about.php">About</a>
     </div>
 
@@ -29,7 +29,7 @@
                 <img src="../images/icons/homeicon.png" class="dropdown-img">
                 <a href="home.php">Home</a>
                 <img src="../images/icons/shopicon.png" class="dropdown-img">
-                <a href="products.php">Products</a>
+                <a href="products.php">Shop</a>
                 <img src="../images/icons/abouticon.png" class="dropdown-img">
                 <a href="about.php">About</a>
             </div>
