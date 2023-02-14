@@ -7,8 +7,8 @@
             <h2>Shop</h2>
         </div>
         <div class="sortBy" align="right">
-            <div class="dropdown"><u>Sort By Categories</u>
-                <div class="dropdown-content">
+            <div class="ddropdown"><u>Sort By Categories</u>
+                <div class="ddropdown-content">
                     <?php   
                     $sql = "SELECT * FROM prod_types";
                     $res = mysqli_query($conn, $sql);
@@ -38,36 +38,7 @@
             
             
         </div>
-        <!--
-        <table class="rock-tbl">
-            <tr>
-                <td>
-                    <img src="../images/shop_rock4.png" class="img-curve img-respond-medium " alt="Ornamant on tree">
-                    
-                </td>
 
-                <td>
-                    <img src="../images/shop_rock3.png" class="img-curve img-respond-medium ">
-                    
-                </td>
-
-                <td>
-                    <img src="../images/shop_rock2.png" class="img-curve img-respond-medium ">
-                    
-                </td>
-                <td>
-                    <img src="../images/shop_rock1.png" class="img-curve img-respond-medium ">
-                    
-                </td>
-            </tr>
-            <tr>
-                <th>Ornaments & Key Chains</th>
-                <th>Mushrooms</th>
-                <th>Hearts</th>
-                <th>Candle Holders</th>
-            </tr>
-        </table>
-        -->
     </section>
     
     <br><br>
@@ -97,18 +68,18 @@
                         }
                     }
                     $counter++;
-                        ?>
-                        <tr>
-                        <td width = "20%"><img src="<?php echo SITEURL;?>/images/<?php echo $image; ?>" alt="<?php echo $prod_descr; ?>" width = "90%"></td>
+                    ?>
+                    <tr>
+                    <td width = "20%"><img src="<?php echo SITEURL;?>/images/<?php echo $image; ?>" alt="<?php echo $prod_descr; ?>" width = "90%"></td>
 
-                        <td><?php echo $prod_name;?></td>
+                    <td><?php echo $prod_name;?></td>
 
 
-                        <td> $<?php echo $price;?></td>
+                    <td> $<?php echo $price;?></td>
 
-                        <td width = '20%'>
-                            <button onclick="sendOrder(<?php echo $id;?>)" class="btn-secondary">Order</button><br>
-                        </td>
+                    <td width = '20%'>
+                        <button onclick="sendOrder(<?php echo $id;?>)" class="btn-secondary">Order</button><br>
+                    </td>
                     </tr>
                     <?php
                 }
