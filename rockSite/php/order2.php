@@ -79,7 +79,6 @@
             
             // Full available details
             console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
-s
             // Show a success message within this page, e.g.
             const element = document.getElementById('paypal-button-container');
             element.innerHTML = '';
@@ -104,7 +103,9 @@ s
         }
     </script>
 
+      <div class="center">
+            <button onclick="sendOrder()" class="btn-secondary">Temp Button</button><br>
+      </div>
 
-    <button onclick="sendOrder()" class="btn-secondary">Temp Button</button><br>
-
+<?php include('partials/footer.php');?>
 
