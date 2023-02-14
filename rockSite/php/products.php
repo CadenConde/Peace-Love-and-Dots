@@ -92,44 +92,25 @@
                     $price=number_format($rows['Price'], 2);
                     if(isset($_GET['sort'])){
                         $sorter = $_GET['sort'];
-                        if($prod_descr == $sorter){
-                            $counter++;
-                        ?>
-                    
-                        <tr>
-                            <td width = "20%"><img src="<?php echo SITEURL;?>/images/<?php echo $image; ?>" alt="<?php echo $prod_descr; ?>" width = "90%"></td>
-    
-                            <td><?php echo $prod_name;?></td>
-    
-    
-                            <td> $<?php echo $price;?></td>
-    
-                            <td width = '20%'>
-                                <button onclick="sendOrder(<?php echo $id;?>)" class="btn-secondary">Order</button><br>
-                            </td>
-                        </tr>
-                        <?php
+                        if($prod_descr != $sorter){
+                            continue;
                         }
                     }
-                    else{
-                        $counter++;
+                    $counter++;
                         ?>
-                    
                         <tr>
-                            <td width = "20%"><img src="<?php echo SITEURL;?>/images/<?php echo $image; ?>" alt="<?php echo $prod_descr; ?>" width = "90%"></td>
-    
-                            <td><?php echo $prod_name;?></td>
-    
-    
-                            <td> $<?php echo $price;?></td>
-    
-                            <td width = '20%'>
-                                <button onclick="sendOrder(<?php echo $id;?>)" class="btn-secondary">Order</button><br>
-                            </td>
-                        </tr>
-                        <?php
-                    }
-                    
+                        <td width = "20%"><img src="<?php echo SITEURL;?>/images/<?php echo $image; ?>" alt="<?php echo $prod_descr; ?>" width = "90%"></td>
+
+                        <td><?php echo $prod_name;?></td>
+
+
+                        <td> $<?php echo $price;?></td>
+
+                        <td width = '20%'>
+                            <button onclick="sendOrder(<?php echo $id;?>)" class="btn-secondary">Order</button><br>
+                        </td>
+                    </tr>
+                    <?php
                 }
                 if($counter == 0){
                     echo '<div class = "center">No Products Found</div>';
