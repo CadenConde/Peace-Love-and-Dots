@@ -31,7 +31,7 @@
                                 $prod_descr=$rows['Description'];
                                 $image=$rows['imageFile'];
                                 $price=number_format($rows['Price'], 2);
-                                ?><img src="<?php echo SITEURL;?>/images/<?php echo $image; ?>" alt="<?php echo $prod_descr; ?>" width = "30%" class="obs">
+                                ?><a href="order.php?id=<?php echo $id?>"><img src="<?php echo SITEURL;?>/images/<?php echo $image; ?>" alt="<?php echo $prod_descr; ?>" width = "30%" class="obs"></a>
                                 <?php
                             }
                         } else {
