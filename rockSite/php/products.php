@@ -49,7 +49,7 @@
         </div>
 
     
-    <table>
+    <table class="pro-tbl">
     <?php 
         $sql = "SELECT * FROM products WHERE sold = 0";
         $res = mysqli_query($conn, $sql);
@@ -74,18 +74,20 @@
                     }
                     $counter++;
                     ?>
-                    <tr>
-                    <td width = "inherit"><img src="<?php echo SITEURL;?>/images/<?php echo $image; ?>" alt="<?php echo $prod_descr; ?>" width = "90%"></td>
-
-                    <td width = "inherit"><?php echo $prod_name;?></td>
-
-
-                    <td> $<?php echo $price;?></td>
-
-                    <td width = "inherit">
-                        <button onclick="sendOrder(<?php echo $id;?>)" class="btn-secondary">Order</button><br>
-                    </td>
-                    </tr>
+                    <?php 
+                    if ($counter % 2 != 0)
+                    {
+                        echo "<tr>";
+                    } ?>
+                        <td style="padding-right: 15px"><img src="<?php echo SITEURL;?>/images/<?php echo $image; ?>" alt="<?php echo $prod_descr; ?>"></td>
+                        <td style="padding-right: 145px"><?php echo $prod_name;?><br> $<?php echo $price;?><br>
+                            <button onclick="sendOrder(<?php echo $id;?>)" class="btn-secondary">Order</button><br>
+                        </td>
+                    <?php
+                    if($counter % 2 == 0){
+                        echo "</tr>";
+                    }
+                    ?>
                     <?php
                 }
                 if($counter == 0){
