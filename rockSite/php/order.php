@@ -79,13 +79,18 @@
                         </tr>
                         <tr>
                             <td colspan="2">
+                                <input type="submit" name="cancel" value="Cancel Order" class="btn-third">
                                 <input type="submit" name="submit" value="Proceed to Checkout" class="btn-secondary">
                             </td>
                         </tr>
                     </table>
-                </form>         
+                </form>
             <?php
             
+    }
+    if (isset($_POST['cancel'])) {
+        echo '<script type="text/javascript">function jsFunction(){location.href = "products.php";}</script>';
+        echo '<script type="text/javascript">jsFunction();</script>';
     }
     if (isset($_POST['submit'])) {
         $fname = $_POST['fName'];

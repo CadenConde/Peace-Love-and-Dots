@@ -101,8 +101,14 @@
         function sendOrder(){
             location.href = "send-order.php<?php echo $vars?>";
         }
+        function back(){
+            location.href = "products.php";
+        }
     </script>
-
+      <div class ="center">         
+          <button class="btn-third" style="padding: 3px" onclick="back()" colspan="2">Cancel Order</button>
+      </div>
+        <br><br><br>
       <div class="center"> <!-- this is temporary -->
             <button onclick="sendOrder()" class="btn-secondary">Temp Button</button><br>
       </div>
