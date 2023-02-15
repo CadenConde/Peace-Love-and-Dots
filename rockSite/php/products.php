@@ -1,11 +1,20 @@
 <?php include('partials/menu.php'); ?>
 
-    <br><br><br>
+    
     <!--Start of Categories-->
-    <section>
+    <section style=background-color:#8fa4a8;>
+    <br><br><br>
         <div class="center">
             <h2>Shop</h2>
         </div>
+        <br><br>
+       <hr style="margin: 0">
+        </section>
+    
+    
+    <!--Start of example Products-->
+<section style=background-color:#b4d2fd;>
+    <br>
         <div class="sortBy" align="right">
             <div class="ddropdown"><u>Sort By Categories</u>
                 <div class="ddropdown-content">
@@ -39,11 +48,7 @@
             
         </div>
 
-    </section>
     
-    <br><br>
-    <!--Start of example Products-->
-<section>
     <table>
     <?php 
         $sql = "SELECT * FROM products WHERE sold = 0";
@@ -70,14 +75,14 @@
                     $counter++;
                     ?>
                     <tr>
-                    <td width = "20%"><img src="<?php echo SITEURL;?>/images/<?php echo $image; ?>" alt="<?php echo $prod_descr; ?>" width = "90%"></td>
+                    <td width = "inherit"><img src="<?php echo SITEURL;?>/images/<?php echo $image; ?>" alt="<?php echo $prod_descr; ?>" width = "90%"></td>
 
-                    <td><?php echo $prod_name;?></td>
+                    <td width = "inherit"><?php echo $prod_name;?></td>
 
 
                     <td> $<?php echo $price;?></td>
 
-                    <td width = '20%'>
+                    <td width = "inherit">
                         <button onclick="sendOrder(<?php echo $id;?>)" class="btn-secondary">Order</button><br>
                     </td>
                     </tr>
@@ -93,20 +98,17 @@
         }
     ?>
     </table>
+    <br><br>
+    <hr>
 </section>
         <script>
             function sendOrder(id=0) {
                 location.href = "order.php?id=" + id;
             }
         </script>
-<br><br>
-    <hr>
     <!-- End of Categories -->
 
     
     </div>
-</body>
-
-</html>
 
 <?php include('partials/footer.php'); ?>
