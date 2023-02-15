@@ -1,9 +1,13 @@
 const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('img-smooth');
-      }
-    });
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('img-smooth');
+    }
   });
-  
-  observer.observe(document.querySelector('.obs'));
+});
+
+document.querySelectorAll('.obs').forEach((i) => {
+  if (i) {
+    observer.observe(i);
+  }
+});
