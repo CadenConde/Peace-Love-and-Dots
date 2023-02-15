@@ -4,17 +4,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../scripts/scroll.js" defer></script>
 </head>
 <body>
     <div class="center">
-        <!--Image Wall Start-->
-        <br><br><br><br><br><br><br>
+        <br><br><br><br>
         <!-- Featured products Start -->
         
         <section class="center">
-            <h2>Featured Items</h2>
+            <h2 style="font-family: Montserrat, sans-serif;">Featured Items</h2>
                 <?php 
                     $sql = "SELECT * FROM products WHERE featured = '1';";
                     $res = mysqli_query($conn, $sql);
@@ -31,7 +29,10 @@
                                 $prod_descr=$rows['Description'];
                                 $image=$rows['imageFile'];
                                 $price=number_format($rows['Price'], 2);
-                                ?><a href="order.php?id=<?php echo $id?>"><img src="<?php echo SITEURL;?>/images/<?php echo $image; ?>" alt="<?php echo $prod_descr; ?>" width = "30%" class="obs img-curve featured-img"></a>
+                                ?>
+                                <div class="img-spacing">
+                                    <a href="order.php?id=<?php echo $id?>"><img src="<?php echo SITEURL;?>/images/<?php echo $image; ?>" alt="<?php echo $prod_descr; ?>" width = "100%" class="obs img-curve featured-img"></a>
+                                </div>
                                 <?php
                             }
                         } else {
@@ -46,5 +47,3 @@
 </html>
         
 <?php include('partials/footer.php'); ?>
-            
-        
