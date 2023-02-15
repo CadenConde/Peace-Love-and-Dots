@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../scroll.js" defer></script>
+    <script src="../scripts/scroll.js" defer></script>
 </head>
 <body>
     <div class="center">
@@ -31,7 +31,7 @@
                                 $prod_descr=$rows['Description'];
                                 $image=$rows['imageFile'];
                                 $price=number_format($rows['Price'], 2);
-                                ?><a href="order.php?id=<?php echo $id?>"><img src="<?php echo SITEURL;?>/images/<?php echo $image; ?>" alt="<?php echo $prod_descr; ?>" width = "30%" class="obs"></a>
+                                ?><a href="order.php?id=<?php echo $id?>"><img src="<?php echo SITEURL;?>/images/<?php echo $image; ?>" alt="<?php echo $prod_descr; ?>" width = "30%" class="obs img-curve featured-img"></a>
                                 <?php
                             }
                         } else {
