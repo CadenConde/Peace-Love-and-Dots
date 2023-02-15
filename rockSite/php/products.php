@@ -7,7 +7,7 @@
         <div class="center">
             <h2>Shop</h2>
         </div>
-        <br><br>
+        <br><br><br><br>
        <hr style="margin: 0">
         </section>
     
