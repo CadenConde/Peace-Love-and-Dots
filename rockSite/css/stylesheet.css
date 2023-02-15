@@ -13,6 +13,23 @@ html {
 @keyframes hamimation {
     100% {background-color: #895f9b;}
 }
+
+@keyframes scroll-anim {
+    
+    100% {
+        opacity: 100%;
+        transform: translateY(-25px);
+    }
+}
+
+.img-smooth {
+    animation-name: scroll-anim;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-delay: 100ms;
+}
+
 /*products buttons*/
 
 .btn-secondary{
@@ -212,6 +229,17 @@ h2{
 .img-curve {
     border-radius: 5%;
 }
+
+.featured-img {
+    opacity: 0%;
+}
+
+.img-spacing {
+    margin: 2%;
+    width: 30%;
+    display: inline-block;
+}
+
 .left{
     text-align: left;
     margin: 1%;
