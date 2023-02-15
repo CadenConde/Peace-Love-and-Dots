@@ -69,6 +69,7 @@ html {
 
 .navbar {
     width: 100%;
+    z-index: 1;
     position: fixed;
     background-color: #b485c8;
     border-bottom: 2px solid black;
@@ -147,7 +148,7 @@ html {
     position: absolute;
     background-color: rgb(141, 47, 148);
     min-width: 120px;
-    z-index: 1;
+    z-index: 2;
     right: 0;
     border: 1px outset rgb(54, 7, 59);
     border-radius: 5px;
