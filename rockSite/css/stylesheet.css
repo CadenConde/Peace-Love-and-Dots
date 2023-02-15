@@ -284,8 +284,19 @@ h6{
 .ddropdown{
     font-size: 20px;
     margin-right: 2%;
+    width: 166px;
 
 
+}
+.pro-tbl{
+    margin-right: auto;
+    margin-left: auto;
+    padding: 5%;
+    width: 100%;
+}
+
+.pro-tbl td{
+    padding-right: 0%;
 }
 
 .ddropdown-content {
