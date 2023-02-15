@@ -5,24 +5,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../scroll.js" defer></script>
 </head>
 <body>
     <div class="center">
         <!--Image Wall Start-->
         <br><br><br><br><br><br><br>
-        <section>
-           <h2>Featured Items</h2> 
-            <img src="../images/Rock7.png" alt="Mushroom Rock Painted with Rainbow Dots" class="img-respond img-curve">
-            <img src="../images/Rock9.png" alt="Mushroom Rock Painted with Rainbow Dots" class="img-respond img-curve">
-            <img src="../images/Rock8.png" alt="Mushroom Rock Painted with Rainbow Dots" class="img-respond img-curve">
-            <img src="../images/Rock10.png" alt="Mushroom Rock Painted with Rainbow Dots" class="img-respond img-curve">
-        </section>
-        <br>
         <!-- Featured products Start -->
-        <br><br>
         
-        <section>
-                <table width = 33%>
+        <section class="center">
+            <h2>Featured Items</h2>
                 <?php 
                     $sql = "SELECT * FROM products WHERE featured = '1';";
                     $res = mysqli_query($conn, $sql);
@@ -39,18 +31,14 @@
                                 $prod_descr=$rows['Description'];
                                 $image=$rows['imageFile'];
                                 $price=number_format($rows['Price'], 2);
-                                ?>
-                                <tr>
-                                    <td width = "20%"><img src="<?php echo SITEURL;?>/images/<?php echo $image; ?>" alt="<?php echo $prod_descr; ?>" width = "90%"></td>
-                                </tr>
+                                ?><img src="<?php echo SITEURL;?>/images/<?php echo $image; ?>" alt="<?php echo $prod_descr; ?>" width = "30%" class="obs">
                                 <?php
                             }
                         } else {
-                            echo "<tr>no featured items found</tr>";
+                            echo "no featured items found";
                         }
                     }
                 ?>
-                </table>
         </section>
         <hr>
     </div>
