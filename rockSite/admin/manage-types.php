@@ -3,8 +3,9 @@
         <div class="wrapper">
 
             <div class = "title"><h1>Manage Categories</h1></div>
-            <br>
+            <br><br>
 
+            <a href="add-type.php" class= "btn-primary">Add Category</a>
             
             <br><br>
 
@@ -49,7 +50,7 @@
                     location.href = "update-type.php?id=" + id;
                 }
                 function removeType(id=0) {
-                    if (confirm("Are you sure you want to delete this product?") == true) {
+                    if (confirm("Are you sure you want to delete this category?") == true) {
                         location.href = "delete-type.php?id=" + id;
                     }
                 }
