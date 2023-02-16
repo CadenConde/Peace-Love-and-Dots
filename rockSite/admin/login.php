@@ -4,11 +4,11 @@
         <title>Rock Website - Login Page </title>
         <link rel="stylesheet" href="../css/admin.css">
 </head>
-<body style="background-image: url('../images/login-background.jpg');">
+<body style="background-image: url('../images/login-background.jpg'); background-repeat: no-repeat; background-size: cover; ">
     <div class="container">
         <div>
         <br><br>
-        <h1 class="login-title">Rock Site Admin Login</h1>
+        <h1 class="login-title">Peace, Love, & Dots Admin Login</h1>
         <br><br>
     
         <?php
