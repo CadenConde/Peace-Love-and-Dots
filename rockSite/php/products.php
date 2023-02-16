@@ -2,18 +2,17 @@
 
     
     <!--Start of Categories-->
-    <section style=background-color:#8fa4a8;>
+    <section>
     <br><br><br>
         <div class="center">
             <h2>Shop</h2>
         </div>
-        <br><br><br><br>
-       <hr style="margin: 0">
+       <hr>
         </section>
     
     
     <!--Start of example Products-->
-<section style=background-color:#b4d2fd;>
+<section>
     <br>
         <div class="sortBy" align="right">
             <div class="ddropdown"><u>Sort By Categories</u>
@@ -79,7 +78,7 @@
                     {
                         echo "<tr>";
                     } ?>
-                        <td style="padding-right: 15px"><img src="<?php echo SITEURL;?>/images/<?php echo $image; ?>" alt="<?php echo $prod_descr; ?>"></td>
+                        <td style="padding-right: 15px"><img src="<?php echo SITEURL;?>/images/<?php echo $image; ?>" alt="<?php echo $prod_descr;?>" width="300px" class="img-curve"></td>
                         <td style="padding-right: 145px"><?php echo $prod_name;?><br> $<?php echo $price;?><br>
                             <button onclick="sendOrder(<?php echo $id;?>)" class="btn-secondary">Order</button><br>
                         </td>

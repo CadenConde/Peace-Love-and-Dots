@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+/*#192D34 #4ec6ce #A1BDA1 #F8E2C4 #EB6363*/
+/* text      blue    green   tan     red*/
+
+/*text:
+/*#192D34 #1c494b #3a583a   #192D34 #561d1d*/
+/* text      blue    green  for tan  red*/
+
 
 * {
     padding: 0 0;
@@ -11,7 +18,7 @@ html {
 }
 
 @keyframes hamimation {
-    100% {background-color: #895f9b;}
+    100% {background-color: #2ea8b0;}
 }
 
 @keyframes scroll-anim {
@@ -33,7 +40,7 @@ html {
 /*products buttons*/
 
 .btn-secondary{
-    background-color: #68BBE3;
+    background-color: #9cc49c;
     margin-top: 2px;
     padding: 2%;
     padding-left: 4%;
@@ -44,10 +51,10 @@ html {
     border-radius: 5px;
 }
 .btn-secondary:hover{
-    background-color: #51b0df;
+    background-color: #6b836b;
 }
 .btn-third{
-    background-color: #e36868;
+    background-color: #EB6363;
     margin-top: 2px;
     padding: 2%;
     padding-left: 4%;
@@ -58,7 +65,7 @@ html {
     border-radius: 5px;
 }
 .btn-third:hover{
-    background-color: #df5151;
+    background-color: #cc5252;
 }
 /* NAVBAR SECTION */
 
@@ -69,26 +76,27 @@ html {
 
 .navbar {
     width: 100%;
-    z-index: 1;
+    z-index: 101;
     position: fixed;
-    background-color: #b485c8;
+    background-color: #53d5df;
     border-bottom: 2px solid black;
     display: flex;
     align-items: center;
 }
 
 .navlinks a {
+    font-family: Montserrat, sans-serif;
     text-decoration: none;
     font-weight: bold;
     margin-right: 3%;
     font-size: 30px;
     border-radius: 10px;
     padding: 1%;
-    color: rgb(119, 30, 115);
+    color: #1c494b;
 }
 
 .navlinks a:hover, .navbar a:focus {
-    color: rgb(50, 7, 48);
+    color: #193d40;
     animation-name: hamimation;
     animation-duration: 0.25s;
     animation-fill-mode: forwards;
@@ -199,8 +207,10 @@ html {
 }
 
 h2{
+    font-family: Montserrat, sans-serif;
     font-weight: lighter;
     font-size: 5vw;
+    color: #192D34;
 }
 .img-respond {
     max-width: 20vw;
@@ -229,10 +239,12 @@ h2{
 }
 .img-curve {
     border-radius: 5%;
+    box-shadow: 5px 5px 5px rgb(63, 63, 63);
 }
 
 .featured-img {
     opacity: 0%;
+   
 }
 
 .img-spacing {
@@ -303,7 +315,7 @@ h6{
 .ddropdown-content {
     display: none;
     position: absolute;
-    background-color: rgb(141, 47, 148);
+    background-color: #EB6363;
     min-width: 120px;
     z-index: 1;
     right: 0;
@@ -328,7 +340,7 @@ h6{
     color: #000000;
     text-decoration: none;
     font-weight: bolder;
-    color: rgb(65, 13, 62);
+    color: #561d1d;
     text-decoration: none;
     display: block;
     text-align: right;
@@ -337,8 +349,8 @@ h6{
 }
 
 .ddropdown-content a:hover {
-    background-color: rgb(90, 22, 96);
-    color: rgb(201, 99, 222)
+    background-color: #682a2a;
+    color: #d17171;
 }
 
 
@@ -435,4 +447,9 @@ h5{
 
 .about-text{
     margin: 5%;
+    
+}
+.about-text p {
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
 }

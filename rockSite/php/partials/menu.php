@@ -8,7 +8,7 @@
     <script src="../scripts/menuClick.js"></script>
     <title>Peace, Love, & Dots</title>
 </head> 
-<body style="background-color:#CAC8D9; margin: 0 0;">
+<body style="background-color:#F8E2C4; margin: 0 0;">  <!-- Background color-->
 
 <div class="navbar">
     <img src="../images/rockdudes_banner.png" alt="Heart Rock in cornner with company motto 'peace love and dots' next to it" class="banner">

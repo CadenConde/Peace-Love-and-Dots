@@ -12,7 +12,7 @@
         <!-- Featured products Start -->
         
         <section class="center">
-            <h2 style="font-family: Montserrat, sans-serif;">Featured Items</h2>
+            <h2>Featured Items</h2>
                 <?php 
                     $sql = "SELECT * FROM products WHERE featured = '1';";
                     $res = mysqli_query($conn, $sql);
@@ -31,7 +31,7 @@
                                 $price=number_format($rows['Price'], 2);
                                 ?>
                                 <div class="img-spacing">
-                                    <a href="order.php?id=<?php echo $id?>"><img src="<?php echo SITEURL;?>/images/<?php echo $image; ?>" alt="<?php echo $prod_descr; ?>" width = "100%" class="obs img-curve featured-img"></a>
+                                    <a href="order.php?id=<?php echo $id?>"><img src="<?php echo SITEURL;?>/images/<?php echo $image; ?>" alt="<?php echo $prod_descr; ?>" width = "90%" class="obs img-curve featured-img"></a>
                                 </div>
                                 <?php
                             }

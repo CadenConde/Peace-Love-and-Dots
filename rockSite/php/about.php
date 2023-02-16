@@ -1,13 +1,10 @@
 <?php include('partials/menu.php'); ?>
-    
-
-    <br><br><br><br>
-
+<br>
     <!--About Info Starts-->
    <section>
         <div class="left">
-            <br><br>
-            <h2>About Me!</h2>
+            <br>
+            <h2 style="text-align:center">About Me!</h2>
         </div>
         <div>
         <img src="../images/PPRock Dudes.png" alt="Owner's Profile Picture" class="img-respond" style="float: left;">
@@ -34,5 +31,5 @@
 
             </div>
         </section>
-
+<hr>
    <?php include('partials/footer.php'); ?>

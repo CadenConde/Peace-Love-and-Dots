@@ -49,7 +49,7 @@
 
     <!--paypal stuff-->
     <div id="smart-button-container">
-      <div style="text-align: center;">
+      <div style="text-align: center; ">
         <div id="paypal-button-container"></div>
       </div>
     </div>
@@ -62,6 +62,7 @@
           color: 'blue',
           layout: 'vertical',
           label: 'paypal',
+          
           
         },
 
@@ -95,6 +96,7 @@
       }).render('#paypal-button-container');
     }
     initPayPalButton();
+
     </script>
 
     <script>
@@ -110,7 +112,7 @@
       </div>
         <br><br><br>
       <div class="center"> <!-- this is temporary -->
-            <button onclick="sendOrder()" class="btn-secondary">Temp Button</button><br>
+            <button onclick="sendOrder()" class="btn-secondary">Temp Order Button</button><br>
       </div>
 
 <?php include('partials/footer.php');?>
