@@ -31,8 +31,25 @@
 .tbl-full{
     width: 100%;
 }
+.container{
+    text-align: center;
+    margin-top: 10%;
+    margin-left: 30%;
+    margin-right: 30%;
+    border: solid black;
+    border-radius: 5%;
+    box-shadow: 10px 10px 5px rgb(63, 63, 63);
+    background-image:  url('../images/box-background.jpg');
+    
+}
+.login-title{
+    font-family: Montserrat, sans-serif;
+}
 
-
+.home-box{
+    box-shadow: 5px 5px 5px rgb(63, 63, 63);
+    border-radius: 3%;
+}
 
 table tr th{
     border-bottom: 1px solid black;
@@ -152,11 +169,16 @@ table tr td{
     flex-direction: column;
     background-color: #003060;
     text-align: center;
-    color: #b9ddf9
+    color: #b9ddf9;
 }
 .footer a{
     color: #b9ddf9;
 
+}
+.footer-bottom{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }
 /* CSS for Manage Admin */
 
