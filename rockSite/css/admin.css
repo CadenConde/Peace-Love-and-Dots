@@ -39,7 +39,10 @@
     border: solid black;
     border-radius: 5%;
     box-shadow: 10px 10px 5px rgb(63, 63, 63);
-    background-image:  url('../images/box-background.jpg');
+
+    background: linear-gradient(rgba(245, 245, 245, 0.6), rgba(245, 245, 245, 0.6)),  url('../images/box-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
     
 }
 .login-title{
