@@ -15,15 +15,15 @@
     <div class="main-content">
         <div class="wrapper">
             <div class = "title"><h1>Home</h1></div>
-            <div class="col-4 text-center">
+            <div class="col-4 text-center home-box">
                 <h1><?php echo $prodCount?></h1>
                 Products Available
             </div>
-            <div class="col-4 text-center">
+            <div class="col-4 text-center home-box">
                 <h1><?php echo $pendCount?></h1>
                 Pending Orders
             </div>
-            <div class="col-4 text-center">
+            <div class="col-4 text-center home-box">
                 <h1><?php echo $complCount?></h1>
                 Completed Orders
             </div>
@@ -33,4 +33,6 @@
     <body onLoad="addElement();"></body>
     <div id="div1"></div>
     
-<?php include('partials/footer.php'); ?>
+    <section class="footer-bottom">
+    <?php include('partials/footer.php'); ?>
+    </section>

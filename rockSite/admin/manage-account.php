@@ -60,5 +60,6 @@
 
 
 
-
-<?php include('partials/footer.php'); ?>
+<section class="footer-bottom">
+    <?php include('partials/footer.php'); ?>
+</section>
