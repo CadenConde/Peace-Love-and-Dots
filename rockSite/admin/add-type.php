@@ -27,18 +27,9 @@
 
 if(isset($_POST['submit']))
 {
-
     $type = $_POST['type'];
-    
     $sql = "INSERT INTO `prod_types` (`id`, `type`) VALUES (NULL, '$type')";;
-    
-
     $res = mysqli_query($conn, $sql) or die();
-
-    $sql = "UPDATE products SET Description = '$type' WHERE Description = '$oldType';";
-
-    $res = mysqli_query($conn, $sql) or die();
-
     if ($res = TRUE)
     {
         header("location:".SITEURL.'admin/manage-types.php');
@@ -46,6 +37,5 @@ if(isset($_POST['submit']))
     else{
         echo "Failed to Insert Data";
     }
-
 }
 ?>

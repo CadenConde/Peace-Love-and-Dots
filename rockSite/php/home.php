@@ -14,7 +14,7 @@
         <section class="center">
             <h2>Featured Items</h2>
                 <?php 
-                    $sql = "SELECT * FROM products WHERE featured = '1';";
+                    $sql = "SELECT * FROM products WHERE featured = '1' && sold = '0';";
                     $res = mysqli_query($conn, $sql);
                     if ($res==TRUE)
                     {

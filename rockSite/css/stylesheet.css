@@ -1,16 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-/*#192D34 #4ec6ce #A1BDA1 #F8E2C4 #EB6363*/
-/* text      blue    green   tan     red*/
-
-/*text:
-/*#192D34 #1c494b #3a583a   #192D34 #561d1d*/
-/* text      blue    green  for tan  red*/
-
-
 * {
     padding: 0 0;
-    font-family: 'Trebuchet MS', Montserrat, Arial, Helvetica, sans-serif;
+    font-family:  Montserrat, sans-serif;
+    font-size: 20px;
 }
 
 html {
@@ -37,8 +30,8 @@ html {
     animation-delay: 100ms;
 }
 
-/*products buttons*/
 
+/*product buttons*/
 .btn-secondary{
     background-color: #9cc49c;
     margin-top: 2px;
@@ -67,13 +60,13 @@ html {
 .btn-third:hover{
     background-color: #cc5252;
 }
-/* NAVBAR SECTION */
 
+
+/* NAVBAR SECTION */
 .banner {
     width: 350px;
     top: 0;
 }
-
 .navbar {
     width: 100%;
     z-index: 101;
@@ -83,7 +76,6 @@ html {
     display: flex;
     align-items: center;
 }
-
 .navlinks a {
     font-family: Montserrat, sans-serif;
     text-decoration: none;
@@ -94,36 +86,33 @@ html {
     padding: 1%;
     color: #1c494b;
 }
-
 .navlinks a:hover, .navbar a:focus {
     color: #193d40;
     animation-name: hamimation;
     animation-duration: 0.25s;
     animation-fill-mode: forwards;
 }
-
 .navlinks {
     width: 100%;
     text-align: right;
     float: right;
 }
-
 .menu {
     position: absolute;
     right: 20px;
 }
-
 .menu-lines {
     display: none;
 }
 
+
+/* HAMBURGER */
 .hamburger {
     width: 63px;
     padding-top: 5px;
     padding-bottom: 5px;
     border-radius: 10px;
 }
-
 .ham-line {
     width: 50px;
     height: 10px;
@@ -132,7 +121,6 @@ html {
     border-radius: 5px;
     pointer-events: none;
 }
-
 @media (max-width: 750px) {
     .navlinks {
         display: none;
@@ -143,14 +131,12 @@ html {
         position: relative;
     }
 }
-
 .hamburger:hover, .hamburger:focus {
     cursor: pointer;
     animation-name: hamimation;
     animation-duration: 0.25s;
     animation-fill-mode: forwards;
 }
-
 .dropdown-content {
     display: none;
     position: absolute;
@@ -162,7 +148,6 @@ html {
     border-radius: 5px;
     box-shadow: 1px 1px 6px rgb(70, 19, 82);
 }
-
 .dropdown-content a {
     font-weight: bolder;
     padding: 12px 12px;
@@ -177,7 +162,6 @@ html {
     background-color: rgb(90, 22, 96);
     color: rgb(201, 99, 222);
 }
-
 .dropdown-img {
     width: 25px;
     height: 25px;
@@ -186,57 +170,29 @@ html {
     margin-left: 4px;
     pointer-events: none;
 }
+/* END HAMBURGER */
 
-.show {
-    display: inline-block;
-}
-
-/* END OF NAVBAR SECTION */
-
-
-.wrapper{
-    /* border: 1px solid black;*/
-     padding: 1%;
-     width: 80%;
-     margin: 0 auto;
-}
-
-.clearfix {
-    float: none;
-    clear: both;
-}
 
 h2{
-    font-family: Montserrat, sans-serif;
     font-weight: lighter;
     font-size: 5vw;
     color: #192D34;
 }
+
 .img-respond {
     max-width: 20vw;
     max-height: 15vw;
     display: inline-block;
     margin: 2%;
 }
-.img-respond-medium {
-    max-width: 21.5vw;
-    max-height: 16.5vw;
-    display: inline-block;
-    width: 85%;
-    
-}
+
 .img-respond-small {
     max-width: 15vw;
     max-height: 10vw;
     display: inline-block;
     margin: none;
 }
-.img-respond-big {
-    max-width: 30vw;
-    max-height: 25vw;
-    display: inline-block;
-    margin: 2%;
-}
+
 .img-curve {
     border-radius: 5%;
     box-shadow: 5px 5px 5px rgb(63, 63, 63);
@@ -244,8 +200,8 @@ h2{
 
 .featured-img {
     opacity: 0%;
-   
 }
+
 
 .img-spacing {
     margin: 2%;
@@ -253,43 +209,10 @@ h2{
     display: inline-block;
 }
 
-.left{
-    text-align: left;
-    margin: 1%;
-}
 
-/*Start of Pic Wall*/
-
+/*Center*/
 .center {
     text-align: center;
-}
-
-
-/* Hyperlink */
-
-.btn-hyperlink {
-    border-radius: 7%;
-    background-color: #827081;
-    text-decoration: none;
-    font-weight: bold;
-    color: beige;
-    font-size: 1rem;
-    text-align: center;
-    padding: 1%;
-
-}
-
-.btn-hyperlink:hover{
-    background-color: #011936;
-}
-
-
-/* Footer */
-
-h6{
-    font-weight: lighter;
-    padding: none;
-    font-size: .75rem;
 }
 
 
@@ -298,9 +221,8 @@ h6{
     font-size: 20px;
     margin-right: 2%;
     width: 166px;
-
-
 }
+
 .pro-tbl{
     margin-right: auto;
     margin-left: auto;
@@ -312,6 +234,7 @@ h6{
     padding-right: 0%;
 }
 
+/*sort by category*/
 .ddropdown-content {
     display: none;
     position: absolute;
@@ -325,16 +248,14 @@ h6{
     position: absolute;
     width: 20%;
     overflow: auto;
-    border: 1px outset rgb(54, 7, 59);
+    border: 1px outset rgb(0, 0, 0);
     border-radius: 5px;
-    box-shadow: 1px 1px 6px rgb(70, 19, 82);
+    box-shadow: 1px 1px 6px rgb(0, 0, 0);
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 .ddropdown:hover .ddropdown-content {
     display: block;
 }
-
-
 .ddropdown-content a {
     display: block;
     color: #000000;
@@ -347,71 +268,22 @@ h6{
     padding: 12px 12px;
     border-radius: inherit;
 }
-
 .ddropdown-content a:hover {
     background-color: #682a2a;
     color: #d17171;
 }
 
 
-
-/* Categories */
-
-small {
-    display: inline-block;
-    font-weight: lighter;
-    font-size: .75rem;
-    padding: 1%;
-    text-align: center;
-}
-
-.extra {
-    vertical-align: top;
-}
-
 /* Order Info */
-
 .ordering {
     border-right: 1px solid rgb(95, 95, 95);
     padding: 1%;
     font-size: 3vw;
     margin-left: .77%;
     font-weight: lighter;
-
 }
 
 
-/* Hyperlink */
-
-.btn-hyperlink-second {
-    border-radius: 7%;
-    background-color: #827081;
-    text-decoration: none;
-    font-weight: bold;
-    color: beige;
-    font-size: 1rem;
-    padding: 1%;
-    text-align: left;
-
-}
-
-.btn-hyperlink:hover{
-    background-color: #011936;
-}
-
-/* Sample Products */
-
-.sample-pieces{
-    border: 1px solid black;
-}
-
-/* Float */
-.float{
-    text-align: center;
-    display: inline-block;
-    margin: 0.5vw;
-    width: auto;
-}
 .container{
     width: 75%;
     height: 0.5vh;
@@ -422,34 +294,12 @@ small {
 
 /* Rock Table */
 
-.rock-tbl{
+.info-tbl{
     display: flex;
     justify-content: center;
 }
 
-.products-tbl {
-    display: flex;
-    justify-content: right;
-    margin-right: 10%;
-}
-
-h5{
-    float: right;
-    font-weight: lighter;
-    font-size: 1vw;
-    padding-top: 3%;
-}
-.section-color{
-    font-size: 1rem;
-}
-
 /* About Page */
-
 .about-text{
     margin: 5%;
-    
-}
-.about-text p {
-    font-family: Montserrat, sans-serif;
-    font-size: 18px;
 }

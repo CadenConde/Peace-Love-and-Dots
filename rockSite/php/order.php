@@ -20,7 +20,7 @@
                 <h3>$<?php echo $price; ?></h3>
             </div>
                 <form action="" method="POST" enctype="multipart/form-data">
-                    <table class="rock-tbl">
+                    <table class="info-tbl">
                         <tr><td><u>CUSTOMER INFO</u></td></tr>
                         <tr>
                             <td>First Name: </td>

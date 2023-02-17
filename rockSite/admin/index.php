@@ -27,7 +27,6 @@
                 <h1><?php echo $complCount?></h1>
                 Completed Orders
             </div>
-            <div class="clearfix"></div> 
         </div>
     </div>
     <body onLoad="addElement();"></body>

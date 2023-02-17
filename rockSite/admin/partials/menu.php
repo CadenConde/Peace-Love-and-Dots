@@ -34,27 +34,21 @@
 <!-- Menu Section Ends-->
 
 </body>
-    <?php
-        
+    <?php //Session Timeout Code
         if ($_SESSION["loggedIn"] == null) {
             header("location:".SITEURL.'admin/login.php');
             $_SESSION["loggedIn"] = false;
             $_SESSION['timestamp'] = time();
         }
-
-        else if((time() - $_SESSION['timestamp'])> 900) { //subtract new timestamp from the old one
-            echo"<script>alert('Session Timeout: Please Log-In Again');</script>";
+        else if((time() - $_SESSION['timestamp'])> 900) {
             $_SESSION["loggedIn"] = "sorry";
             header("location:".SITEURL.'admin/login.php');
         }
-
         if ($_SESSION["loggedIn"] == false) {
             header("location:".SITEURL.'admin/login.php');
         }
-
         else {
             $_SESSION['timestamp'] = time();
         } 
-        
     ?>
 </html>

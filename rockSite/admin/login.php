@@ -12,8 +12,11 @@
         <br><br>
     
         <?php
-            if ($_SESSION["loggedIn"] == 'sorry') {
-                echo "Session Timeout, Please Log-In Again<br><br>";
+        
+            if($_SESSION["loggedIn"] != 1){
+                if ($_SESSION["loggedIn"] == "sorry") {
+                    echo "Session Timeout, Please Log-In Again<br><br>";
+                }
             }
 
             $_SESSION["loggedIn"] = false;
@@ -64,6 +67,7 @@
                 }
             }
         ?>
+        <br><br>
     </div>    
 </body>
 

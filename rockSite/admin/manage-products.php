@@ -74,7 +74,7 @@
                                     <td width = '20%'>
                                         <button onclick="updateProd(<?php echo $id;?>)" class="btn-secondary">Update</button><br>
                                         <button onclick="removeProd(<?php echo $id;?>)" class="btn-third">Remove</button><br>
-                                        <button onclick="setFeatured(<?php echo $id;?>,<?php echo $featured;?>)" class="btn-fourth"><?php if ($featured == 1) {
+                                        <button onclick="setFeatured(<?php echo $id;?>,<?php echo $featured;?>)" class="btn-secondary"><?php if ($featured == 1) {
                                         echo "Unf";
                                     } else {
                                         echo "F";
