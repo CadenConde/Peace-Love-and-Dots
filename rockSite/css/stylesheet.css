@@ -1,19 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); /*fix this*/
 
 * {
     padding: 0 0;
     font-family:  Montserrat, sans-serif;
     font-size: 20px;
 }
-
 html {
     min-width: 550px;
 }
-
 @keyframes hamimation {
     100% {background-color: #2ea8b0;}
 }
-
 @keyframes scroll-anim {
     
     100% {
@@ -21,7 +18,6 @@ html {
         transform: translateY(-25px);
     }
 }
-
 .img-smooth {
     animation-name: scroll-anim;
     animation-duration: 1s;
@@ -29,7 +25,6 @@ html {
     animation-iteration-count: 1;
     animation-delay: 100ms;
 }
-
 
 /*product buttons*/
 .btn-secondary{
@@ -187,8 +182,8 @@ h2{
 }
 
 .img-respond-small {
-    max-width: 15vw;
-    max-height: 10vw;
+    max-width: 13vw;
+    max-height: 8vw;
     display: inline-block;
     margin: none;
 }
