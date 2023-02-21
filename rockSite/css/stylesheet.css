@@ -112,7 +112,7 @@ html {
     width: 50px;
     height: 10px;
     margin: 10%;
-    background-color: rgb(60, 7, 58);
+    background-color: rgb(17, 7, 60);
     border-radius: 5px;
     pointer-events: none;
 }
@@ -135,18 +135,18 @@ html {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: rgb(141, 47, 148);
+    background-color: #EB6363;
     min-width: 120px;
     z-index: 2;
     right: 0;
-    border: 1px outset rgb(54, 7, 59);
+    border: 1px outset black;
     border-radius: 5px;
-    box-shadow: 1px 1px 6px rgb(70, 19, 82);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 .dropdown-content a {
     font-weight: bolder;
     padding: 12px 12px;
-    color: rgb(65, 13, 62);
+    color: #561d1d;
     text-decoration: none;
     display: block;
     border-radius: inherit;
@@ -154,8 +154,8 @@ html {
 }
 
 .dropdown-content a:hover, .dropdown-content a:focus {
-    background-color: rgb(90, 22, 96);
-    color: rgb(201, 99, 222);
+    background-color: #682a2a;
+    color: #d17171;
 }
 .dropdown-img {
     width: 25px;
@@ -165,8 +165,12 @@ html {
     margin-left: 4px;
     pointer-events: none;
 }
-/* END HAMBURGER */
 
+.show {
+    display: block;
+}
+
+/* END HAMBURGER */
 
 h2{
     font-weight: lighter;
@@ -215,7 +219,7 @@ h2{
 .ddropdown{
     font-size: 20px;
     margin-right: 2%;
-    width: 166px;
+    width: 200px;
 }
 
 .pro-tbl{
@@ -230,6 +234,7 @@ h2{
 }
 
 /*sort by category*/
+
 .ddropdown-content {
     display: none;
     position: absolute;
@@ -239,13 +244,10 @@ h2{
     right: 0;
     font-size: 15px;
     margin-right: 2%;
-    display: none;
-    position: absolute;
     width: 20%;
     overflow: auto;
-    border: 1px outset rgb(0, 0, 0);
+    border: 1px outset black;
     border-radius: 5px;
-    box-shadow: 1px 1px 6px rgb(0, 0, 0);
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 .ddropdown:hover .ddropdown-content {
@@ -253,12 +255,10 @@ h2{
 }
 .ddropdown-content a {
     display: block;
-    color: #000000;
     text-decoration: none;
     font-weight: bolder;
     color: #561d1d;
     text-decoration: none;
-    display: block;
     text-align: right;
     padding: 12px 12px;
     border-radius: inherit;
