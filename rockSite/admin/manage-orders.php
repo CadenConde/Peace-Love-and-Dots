@@ -18,7 +18,7 @@
                 </tr>
 
                 <?php 
-                    $sql = "SELECT * FROM orders INNER JOIN products ON orders.prod_id=products.ID;";
+                    $sql = "SELECT * FROM orders INNER JOIN products ON orders.prod_id=products.ID ORDER BY order_id desc;";
                     $res = mysqli_query($conn, $sql);
                     if ($res==TRUE)
                     {
