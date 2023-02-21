@@ -15,6 +15,7 @@
     <div class="main-content">
         <div class="wrapper">
             <div class = "title"><h1>Home</h1></div>
+            <br><br><br><br><br><br><br><br>
             <div class="col-4 text-center home-box">
                 <h1><?php echo $prodCount?></h1>
                 Products Available

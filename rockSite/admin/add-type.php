@@ -8,7 +8,7 @@
                     <tr>
                         <td>Type: </td>
                         <td> 
-                            <input type="text" name="type" placeholder="Type">
+                            <input type="text" name="type" placeholder="Product Type">
                         </td>
                     </tr>
                     <tr>
@@ -20,9 +20,9 @@
             </form>
         </div>    
     </div>
-
+<section class="footer-bottom">
 <?php include('partials/footer.php'); ?>
-
+</section>
 <?php
 
 if(isset($_POST['submit']))

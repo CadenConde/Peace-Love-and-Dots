@@ -51,7 +51,7 @@
                                 ?>
                                
                                 <tr>
-                                    <td width = "20%"><img src="<?php echo SITEURL;?>/images/<?php echo $image; ?>" alt="<?php echo $prod_descr; ?>" width = "90%"></td>
+                                    <td width = "20%"><img src="<?php echo SITEURL;?>/images/<?php echo $image; ?>" class="img-curve" alt="<?php echo $prod_descr; ?>" width = "90%"></td>
 
                                     <td><?php echo $prod_name;?></td>
 
