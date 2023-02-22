@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Peace, Love, and Dots site page showcasing magnificent painted rocks">
     <meta name="viewport" content="width=device-width", initial-scale="1.0">
     <link rel="stylesheet" href="../css/stylesheet.css">
     <script src="../scripts/menuClick.js"></script>
