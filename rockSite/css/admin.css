@@ -40,7 +40,21 @@
 .home-box{
     border-style: solid;
     box-shadow: 5px 5px 5px rgb(63, 63, 63);
-    border-radius: 3%;
+    border-radius: 4%;
+}
+.btn-homepage{
+    border: black solid 2px;
+    background-color: rgb(86, 224, 224);
+    padding: 1%;
+    color: #2d3436;
+    text-decoration: none;
+    font-weight: lighter;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgb(63, 63, 63);
+}
+.btn-homepage:hover{
+    background-color: rgb(86, 180, 180);
+    box-shadow: none;
 }
 
 table tr th{
@@ -59,9 +73,11 @@ table tr td{
     text-decoration: none;
     font-weight: lighter;
     border-radius: 5px;
+    box-shadow: 2px 2px 2px rgb(63, 63, 63);
 }
 .btn-primary:hover{
     background-color: #56ade7;
+    box-shadow: none;
 }
 .btn-secondary{
     background-color: #68BBE3;
@@ -73,9 +89,11 @@ table tr td{
     text-decoration: none;
     font-weight: lighter;
     border-radius: 5px;
+    box-shadow: 2px 2px 2px rgb(63, 63, 63);
 }
 .btn-secondary:hover{
     background-color: #51b0df;
+    box-shadow: none;
 }
 .btn-third{ /*Remove buttons*/
     background-color: #ff6b81;
@@ -87,9 +105,11 @@ table tr td{
     text-decoration: none;
     font-weight: lighter;
     border-radius: 5px;
+    box-shadow: 2px 2px 2px rgb(63, 63, 63);
 }
 .btn-third:hover{
     background-color: #ff4575;
+    box-shadow: none;
 }
 
 /* CSS for Menu */
@@ -101,7 +121,7 @@ table tr td{
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #003060;
+    background-color: #155baa;
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
@@ -121,7 +141,7 @@ table tr td{
     color: #b9ddf9;
 }
 
-.menu ul li a:hover{
+.menu ul li a:hover :focus{
     text-decoration: underline;
 }
 
@@ -145,7 +165,7 @@ table tr td{
     padding: 1rem;
     margin-top: 1rem;
     flex-direction: column;
-    background-color: #003060;
+    background-color: #155baa;
     text-align: center;
     color: #b9ddf9;
 }
@@ -158,5 +178,10 @@ table tr td{
     width: 100%;
     bottom: 0;
 }
-/* CSS for Manage Admin */
+/* CSS for Manage Product */
+
+.img-curve {
+    border-radius: 5%;
+    box-shadow: 5px 5px 5px rgb(63, 63, 63);
+}
 
