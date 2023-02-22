@@ -15,7 +15,7 @@
     <div class="main-content">
         <div class="wrapper">
             <div class = "title"><h1>Home</h1></div>
-            <br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br>
             <div class="col-4 text-center home-box">
                 <h1><?php echo $prodCount?></h1>
                 Products Available
@@ -28,10 +28,15 @@
                 <h1><?php echo $complCount?></h1>
                 Completed Orders
             </div>
+            <br><br><br><br><br><br><br><br><br><br>
+            <div class="text-center ">
+                <a href="http://localhost/rocksite/php/home.php" class="btn-homepage text-center" style="width: 25%;">Go To Home Page</a>
+            </div>
         </div>
     </div>
     <body onLoad="addElement();"></body>
     <div id="div1"></div>
+    
     
     <section class="footer-bottom">
     <?php include('partials/footer.php'); ?>
