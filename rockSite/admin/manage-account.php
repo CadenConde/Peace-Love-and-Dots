@@ -5,11 +5,8 @@
         <div class = "title"><h1>Manage Account</h1></div>
         <?php 
                
-            $sql = "SELECT * FROM login";
-        
+            $sql = "SELECT * FROM login"; //get account info
             $res = mysqli_query($conn, $sql);
-            
-        
             if ($res == TRUE) {
                 $row=mysqli_fetch_assoc($res);
                 $count = mysqli_num_rows($res);
@@ -17,10 +14,22 @@
                     $username = $row['Username'];
                     $passwordLength = $row['passwordLength'];
                 }
-            }?>
+            }
+
+            $sql = "SELECT * FROM about"; //get about info 
+            $res = mysqli_query($conn, $sql);
+            if ($res == TRUE) {
+                $row=mysqli_fetch_assoc($res);
+                $count = mysqli_num_rows($res);
+                if ($count > 0) {
+                    $oldAbout = $row['about'];
+                }
+            }
+            
+            ?>
 
             <br><br>
-            <table class= "tbl-full">
+            <table class= "tbl-full"> <!--username/password info-->
                 <tr>
                     <td>Username:</td>
                     <td><?php echo $username;?></td>
@@ -31,7 +40,7 @@
                 <tr>
                     <td>Password:</td>
                     <td>
-                        <?php for ( //just make the number of dots as password length
+                        <?php for ( //make the number of dots as password length, so we dont know the password
                         $x = 0;
                         $x < $passwordLength;
                         $x++
@@ -49,14 +58,59 @@
                     </td>
                 </tr>
             </table>
+            <br><br><br>
             <script>
-                function logOut(){
+                function logOut(){ //logout button
                     location.href = "login.php";
                 }
             </script>
+
+
+            <form action="" method="POST" enctype="multipart/form-data"> <!--Update About Me Text-->
+                <table class="tbl-30">
+                    <tr>
+                        <td nowrap>About Me:</td> <!--nowrap makes it one line-->
+                        <td> 
+                            <textarea style="padding:3px" id="about" name="about"><?php echo $oldAbout?></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" name="submit" value="Update About" class="btn-secondary">
+                        </td>
+                    </tr>
+                </table>
+                <pre style="font-size: 14px">(Done as html code, surround paragraphs with &lt;p>*paragraph*&lt;/p><br> also you can bold and underline with &lt;b>*text*&lt;/b> and &lt;u>*text*&lt;/u>, repectively)</pre>
+                <!--pre and &lt; to write html code as text-->
+            </form>
+            <?php 
+            if(isset($_SESSION['aboutIn']))
+                {
+                    echo "Updated";
+                    unset($_SESSION['aboutIn']);
+                }
+            ?>
     </div>
 </div>
+<?php
+if(isset($_POST['submit']))
+{
+    $about = $_POST['about'];
 
+    $sql = "UPDATE about SET about = '$about' WHERE id = 1;";
+
+    $res = mysqli_query($conn, $sql) or die();
+
+    if ($res = TRUE)
+    {
+        header("location:".SITEURL.'admin/manage-account.php');
+        $_SESSION['aboutIn'] = true;
+    }
+    else{
+        echo "Failed to Update";
+    }
+}
+?>
 
 
 

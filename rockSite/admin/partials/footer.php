@@ -1,7 +1,7 @@
 
-<!-- Footer Section Starts --> 
+<!-- Admin footer logo and copyright info: --> 
     
-    <div class="footer">
+    <div class="footer"> 
         <div class="wrapper">
         <p class="text-center">
             2023 All Rights Reserved, Rock Site. Developed by Caden Conde & Eric Bucher<br><br>
@@ -9,7 +9,5 @@
         </p>
         </div>
     </div>
-    
-<!-- Footer Section End-->
 </body>
 </html>

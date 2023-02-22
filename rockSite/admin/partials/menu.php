@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="../css/admin.css">
     </head>
 <body>
-    <!-- Menu Section Starts -->
+    <!-- Sidebar -->
     <div class="menu text-center">
         <div class="wrapper">
             <ul>
@@ -31,7 +31,7 @@
             </ul>
         </div>
     </div>
-<!-- Menu Section Ends-->
+<!--End Sidebar -->
 
 </body>
     <?php //Session Timeout Code
@@ -40,7 +40,7 @@
             $_SESSION["loggedIn"] = false;
             $_SESSION['timestamp'] = time();
         }
-        else if((time() - $_SESSION['timestamp'])> 900) {
+        else if((time() - $_SESSION['timestamp'])> 900) { /* If no activity for 15 min, timeout */
             $_SESSION["loggedIn"] = "sorry";
             header("location:".SITEURL.'admin/login.php');
         }
