@@ -78,8 +78,8 @@
                     {
                         echo "<tr>";
                     } ?>
-                        <td style="padding-right: 15px"><img src="<?php echo SITEURL;?>/images/<?php echo $image; ?>" alt="<?php echo $prod_descr;?>" width="300px" class="img-curve"></td>
-                        <td style="padding-right: 145px"><?php echo $prod_name;?><br> $<?php echo $price;?><br>
+                        <td style="padding-right: 15px; padding-bottom:10px;"><img src="<?php echo SITEURL;?>/images/<?php echo $image; ?>" alt="<?php echo $prod_descr;?>" width="300px" class="img-curve"></td>
+                        <td style="padding-right: 145px; padding-bottom:10px;"><?php echo $prod_name;?><br> $<?php echo $price;?><br>
                             <button onclick="sendOrder(<?php echo $id;?>)" class="btn-secondary">Order</button><br>
                         </td>
                     <?php

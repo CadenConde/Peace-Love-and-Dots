@@ -325,4 +325,6 @@ h2{
 /* About Page */
 .about-text{
     margin: 5%;
+    padding-right: 10%;
+    padding-left: 10%;
 }

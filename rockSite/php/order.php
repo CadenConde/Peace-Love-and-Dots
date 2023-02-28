@@ -18,6 +18,8 @@
                 <h1>ORDER ITEM</h1>
                 <img src="<?php echo SITEURL;?>/images/<?php echo $image; ?>" alt="<?php echo $prod_descr; ?>" width = "20%">
                 <h3>$<?php echo $price; ?></h3>
+
+                <div id="error_feild"></div>
             </div>
                 <form action="" method="POST" enctype="multipart/form-data">
                     <table class="info-tbl">
@@ -92,42 +94,48 @@
         echo '<script type="text/javascript">function jsFunction(){location.href = "products.php";}</script>';
         echo '<script type="text/javascript">jsFunction();</script>';
     }
-    if (isset($_POST['submit'])) {
-        $fname = $_POST['fName'];
-        $lname = $_POST['lName'];
-        $email = $_POST['email'];
-        $address1 = $_POST['line1'];
-        $address2 = $_POST['line2'];
-        $address3 = $_POST['city'] . ", " . $_POST['state'] . " " . $_POST['zip'];
-        $address4 = $_POST['country'];
-        if($fname == ""){
-            echo "Please enter your name";
-        }
-        else if($lname == ""){
-            echo "Please enter your name";
-        }
-        else if($email == ""){
-            echo "Please enter your email";
-        }
-        else if($address1 == ""){
-            echo "Please enter your full address";
-        }
-        else if( $_POST['city'] == "" || $_POST['state'] == "" || $_POST['zip'] == ""){
-            echo "Please enter your full address";
-        }
-        else if( $address4 == ""){
-            echo "Please enter your full address";
-        }
-        else{
-            $vars = "?prod_id=$id&fname=$fname&lname=$lname&email=$email&address1=$address1&address2=$address2&address3=$address3&address4=$address4";
-            echo '<script type="text/javascript">function jsFunction(){location.href = "order2.php'.$vars.'";}</script>';
-            echo '<script type="text/javascript">jsFunction();</script>'; //things broke so i cheated the link
-        }
-
-    }
-
-    
     ?>
+    
+    <script type="text/javascript">
+        var fieldNameElement = document.getElementById('error_feild');
+        <?php
+            if (isset($_POST['submit'])) {
+                $fname = $_POST['fName'];
+                $lname = $_POST['lName'];
+                $email = $_POST['email'];
+                $address1 = $_POST['line1'];
+                $address2 = $_POST['line2'];
+                $address3 = $_POST['city'] . ", " . $_POST['state'] . " " . $_POST['zip'];
+                $address4 = $_POST['country'];
+                if($fname == ""){
+                    echo 'fieldNameElement.innerHTML = "Please enter your name";';
+                }
+                else if($lname == ""){
+                    echo 'fieldNameElement.innerHTML = "Please enter your name"';
+                }
+                else if($email == ""){
+                    echo 'fieldNameElement.innerHTML = "Please enter your email"';
+                }
+                else if($address1 == ""){
+                    echo 'fieldNameElement.innerHTML = "Please enter your full address"';
+                }
+                else if( $_POST['city'] == "" || $_POST['state'] == "" || $_POST['zip'] == ""){
+                    echo 'fieldNameElement.innerHTML = "Please enter your full address"';
+                }
+                else if( $address4 == ""){
+                    echo 'fieldNameElement.innerHTML = "Please enter your full address"';
+                }
+                
+                else{
+                    $vars = "?prod_id=$id&fname=$fname&lname=$lname&email=$email&address1=$address1&address2=$address2&address3=$address3&address4=$address4";
+                    echo 'function jsFunction(){location.href = "order2.php'.$vars.'";}';
+                    echo 'jsFunction();'; //things broke so i cheated the link
+                }
+
+            }
+        ?>
+    </script>
+   
 
 
 <?php include('partials/footer.php');?>

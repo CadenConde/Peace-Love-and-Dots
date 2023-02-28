@@ -71,7 +71,7 @@
                     <tr>
                         <td nowrap>About Me:</td> <!--nowrap makes it one line-->
                         <td> 
-                            <textarea style="padding:3px" id="about" name="about"><?php echo $oldAbout?></textarea>
+                            <textarea style="padding:3px" id="about" name="about" cols="80" rows="10"><?php echo $oldAbout?></textarea>
                         </td>
                     </tr>
                     <tr>
@@ -114,6 +114,5 @@ if(isset($_POST['submit']))
 
 
 
-<section class="footer-bottom">
+
     <?php include('partials/footer.php'); ?>
-</section>

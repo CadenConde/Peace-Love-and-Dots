@@ -44,7 +44,7 @@
 }
 .btn-homepage{
     border: black solid 2px;
-    background-color: rgb(86, 224, 224);
+    background-color: #68BBE3;
     padding: 1%;
     color: #2d3436;
     text-decoration: none;
@@ -67,7 +67,7 @@ table tr td{
 }
 .btn-primary{
     border: black solid 2px;
-    background-color: #80bde6;
+    background-color: #68BBE3;
     padding: 1%;
     color: #2d3436;
     text-decoration: none;
@@ -121,7 +121,7 @@ table tr td{
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #155baa;
+    background-color: #124f94;
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
@@ -165,7 +165,7 @@ table tr td{
     padding: 1rem;
     margin-top: 1rem;
     flex-direction: column;
-    background-color: #155baa;
+    background-color: #124f94;
     text-align: center;
     color: #b9ddf9;
 }

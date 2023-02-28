@@ -17,11 +17,13 @@
                }
                ?>
         <div>
-        <img src="../images/PPRock Dudes.png" alt="Owner's Profile Picture" class="img-respond" style="float: left;">
+        <img src="../images/PPRock Dudes.png" alt="Owner's Profile Picture" class="img-respond" style="float: left;" >
         </div>
         <div class="about-text">
             <?php echo $about?>
         </div>
         <!--About Info Ends-->
-<hr>
+    </section>
+<br><br>
+        <hr>
    <?php include('partials/footer.php'); ?>
