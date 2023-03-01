@@ -2,7 +2,7 @@
 
     <div class="main-content">
         <div class="wrapper">
-            <h1>Update Type</h1>
+            <h1>Update Category</h1>
             <br><br>
         
             <?php 
@@ -33,7 +33,7 @@
             <form action="" method="POST">
                 <table class="tbl-30">
                     <tr>
-                        <td>New Type: </td>
+                        <td>New Category: </td>
                         <td> 
                             <input type="text" name="type" value="<?php echo $type?>">
                         </td>
@@ -47,8 +47,10 @@
             </form>
         </div>    
     </div>
-
+    
+<section class="footer-bottom">
 <?php include('partials/footer.php'); ?>
+</section>
 
 <?php
 

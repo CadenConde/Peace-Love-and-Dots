@@ -15,7 +15,7 @@
             <div class="center">
 
                 <h1>ORDER ITEM</h1>
-                <img src="<?php echo SITEURL;?>/images/<?php echo $image; ?>" alt="<?php echo $prod_descr; ?>" width = "20%">
+                <img src="<?php echo SITEURL;?>/images/<?php echo $image; ?>" alt="<?php echo $prod_descr; ?>" width = "20%" class="img-curve">
                 <h3>$<?php echo $price; ?></h3>
 
                 <p>Please review your information before ordering:</p>

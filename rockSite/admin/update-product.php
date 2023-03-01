@@ -160,5 +160,6 @@ if(isset($_POST['submit']))
 
 }
 ?>
-
+<section class="footer-bottom">
 <?php include('partials/footer.php'); ?>
+</section>

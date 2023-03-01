@@ -48,8 +48,9 @@
             </form>
         </div>    
     </div>
-
+<section class="footer-bottom">
 <?php include('partials/footer.php'); ?>
+</section>
 
 <?php
 

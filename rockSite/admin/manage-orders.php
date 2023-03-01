@@ -44,7 +44,7 @@
                                     <td><?php echo $email?></td>
                                     <td><?php echo $time?></td>
                                     <td width = '20%'>
-                                        <button onclick="setStatus(<?php echo $id;?>,'<?php echo $status;?>')" class="btn-secondary"><?php if ($status == "Pending") {
+                                        <button onclick="setStatus(<?php echo $id;?>,'<?php echo $status;?>')" class=<?php if($status == "Pending"){echo "btn-secondary";}else{echo "btn-third";} ?>><?php if ($status == "Pending") {
                                             echo "M";
                                         } else {
                                             echo "Unm";
