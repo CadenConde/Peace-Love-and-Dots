@@ -11,7 +11,7 @@
 html {
     min-width: 550px;
 }
-@keyframes showcontent {
+@keyframes hamimation {
     100% {background-color: #2ea8b0;}
 }
 @keyframes scroll-anim {
@@ -93,7 +93,6 @@ html {
     border-bottom: 2px solid black;
     display: flex;
     align-items: center;
-    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.447);
 }
 .navlinks a {
     font-family: Montserrat, sans-serif;
@@ -104,11 +103,10 @@ html {
     border-radius: 10px;
     padding: 1%;
     color: #1c494b;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.307);
 }
 .navlinks a:hover, .navbar a:focus {
     color: #193d40;
-    animation-name: showcontent;
+    animation-name: hamimation;
     animation-duration: 0.25s;
     animation-fill-mode: forwards;
 }
@@ -126,14 +124,14 @@ html {
 }
 
 
-/* Small screen width dropdown */
-.three-line-menu {
+/* HAMBURGER */
+.hamburger {
     width: 63px;
     padding-top: 5px;
     padding-bottom: 5px;
     border-radius: 10px;
 }
-.tlm-line {
+.ham-line {
     width: 50px;
     height: 10px;
     margin: 10%;
@@ -151,9 +149,9 @@ html {
         position: relative;
     }
 }
-.three-line-menu:hover, .three-line-menu:focus {
+.hamburger:hover, .hamburger:focus {
     cursor: pointer;
-    animation-name: showcontent;
+    animation-name: hamimation;
     animation-duration: 0.25s;
     animation-fill-mode: forwards;
 }
@@ -195,13 +193,12 @@ html {
     display: block;
 }
 
-/* End of small screen section */
+/* END HAMBURGER */
 
 h2{
     font-weight: lighter;
     font-size: 5vw;
     color: #192D34;
-    text-shadow: 2px 2px 3px rgba(40, 40, 40, 0.352);
 }
 
 .img-respond {
