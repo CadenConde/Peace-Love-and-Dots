@@ -21,10 +21,10 @@
 
     <div class="menu">
         <div class="menu-lines">
-            <div class="hamburger" onclick="menuClick()">
-                <div class="ham-line hl1"></div>
-                <div class="ham-line hl2"></div>
-                <div class="ham-line hl3"></div>
+            <div class="three-line-menu" onclick="menuClick()">
+                <div class="tlm-line"></div>
+                <div class="tlm-line"></div>
+                <div class="tlm-line"></div>
             </div>
             <div id="dropdown" class="dropdown-content">
                 <img src="../images/icons/homeicon.png" class="dropdown-img">
