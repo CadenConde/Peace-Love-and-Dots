@@ -71,7 +71,7 @@
                 }
                 
                 function filterPend() {
-                    location.href = ".php";
+                    location.href = "filter-order.php";
                 }
             </script>
         </div>
