@@ -102,6 +102,25 @@ if(isset($_POST['submit']))
     if ($res = TRUE)
     {
         echo "Data Inserted";
+
+        $sql = "SELECT * FROM maillist";
+        $res = mysqli_query($conn, $sql);
+        if ($res==TRUE)
+        {
+            //emails to mailing list
+            /*$content = '<html><p>New '.$description. 's have been posted, check it out at </p><a href="'.SITEURL.'/rockSite/php/home.php"></a></html>';
+            $headers = 'MIME-Version: 1.0' . "\r\n";
+            $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n"; 
+            $count = mysqli_num_rows($res);
+            if ($count>0)
+            {
+                while($rows=mysqli_fetch_assoc($res))
+                {
+                    $email = $rows['email'];
+                    mail($email,"New Products Available",$content,$headers);
+                }
+            }*/
+        }
         header("location:".SITEURL.'admin/manage-products.php');
     }
     else{

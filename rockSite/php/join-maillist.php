@@ -46,7 +46,7 @@
             else{
                 $sql = "INSERT INTO `mailList` (`id`, `email`) VALUES (NULL, '$email')";
                 $res = mysqli_query($conn, $sql);
-                echo "$count <br>Thank you for joining the mailing list!";
+                echo "<br>Thank you for joining the mailing list!";
             }
         
         }
