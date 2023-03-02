@@ -28,7 +28,7 @@
                 <h1><?php echo $subCount?></h1>
                 On Mailing List
             </div>
-            <br>
+            
             <div class="col-4 text-center home-box">
                 <h1><?php echo $pendCount?></h1>
                 Pending Orders
@@ -37,10 +37,10 @@
                 <h1><?php echo $complCount?></h1>
                 Completed Orders
             </div>
-            <br><br><br><br><br><br><br><br><br><br>
-            <div class="text-center ">
-                <a href="http://localhost/rocksite/php/home.php" class="btn-homepage text-center" style="width: 25%;">Go To Home Page</a>
-            </div>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+        <div style="margin-left:10%;">
+            <a href="http://localhost/rocksite/php/home.php" class="btn-homepage text-center" style="width: 25%;">Go To Home Page</a>
         </div>
     </div>
     <body onLoad="addElement();"></body>
