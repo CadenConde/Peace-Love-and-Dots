@@ -2,6 +2,7 @@
    <div class="center">
     <br><br><br><br><br><br>
     <h2>Thanks for Ordering!</h2>
+    <p>Check your email for your order receipt</p>
     <br><br>
 
     <script>

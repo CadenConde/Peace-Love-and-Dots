@@ -7,10 +7,7 @@
         <div class="center">
             <h2>Shop</h2>
         </div>
-       <hr>
         </section>
-    
-    
     <!--Start of example Products-->
 <section>
     <br>
@@ -90,10 +87,10 @@
                     <?php
                 }
                 if($counter == 0){
-                    echo '<div class = "center">No Products Found</div>';
+                    echo '<br><div class = "center">No Products Found</div>';
                 }
             } else {
-                echo '<div class = "center">No Products Found</div>';
+                echo '<br><div class = "center">No Products Found</div>';
             }
             
         }

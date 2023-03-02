@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 22, 2023 at 03:51 PM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 8.1.6
+-- Generation Time: Mar 02, 2023 at 05:30 AM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `about` (
   `id` int(11) NOT NULL,
   `about` varchar(5000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `about`
@@ -50,7 +50,7 @@ CREATE TABLE `login` (
   `Username` varchar(255) NOT NULL,
   `Password` varchar(255) NOT NULL,
   `passwordLength` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `login`
@@ -58,6 +58,24 @@ CREATE TABLE `login` (
 
 INSERT INTO `login` (`Id`, `Username`, `Password`, `passwordLength`) VALUES
 (1, 'caden1', '5f4dcc3b5aa765d61d8327deb882cf99', 8);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `maillist`
+--
+
+CREATE TABLE `maillist` (
+  `id` int(11) NOT NULL,
+  `email` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `maillist`
+--
+
+INSERT INTO `maillist` (`id`, `email`) VALUES
+(1, 'cadenconde@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -74,15 +92,16 @@ CREATE TABLE `orders` (
   `time` datetime NOT NULL DEFAULT current_timestamp(),
   `customer_first` varchar(100) NOT NULL,
   `customer_last` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `orders`
 --
 
 INSERT INTO `orders` (`order_id`, `prod_id`, `status`, `customer_address`, `customer_email`, `time`, `customer_first`, `customer_last`) VALUES
-(18, 15, 'Pending', '2615 Wood bluff lane  Dayton, Ohio 45458 United States', 'bconde_csc@yahoo.com', '2023-02-21 08:35:19', 'Brian', 'Conde'),
-(19, 75, 'Pending', '2615 Wood bluff lane  Dayton, Ohio 45458 United States', 'bconde_csc@yahoo.com', '2023-02-21 08:51:36', 'Brian', 'Conde');
+(56, 15, 'Pending', '1958 Spindletop Ln.  Dayton, OH 45458 United States', 'cadenconde@gmail.com', '2023-03-01 17:15:21', 'Caden', 'Conde'),
+(57, 20, 'Pending', '1958 Spindletop Ln.  Dayton, OH 45458 United States', 'cadenconde@gmail.com', '2023-03-01 17:21:51', 'Caden', 'Conde'),
+(58, 75, 'Complete', '1958 Spindletop Ln.  Dayton, OH 45458 United States', 'cadenconde@gmail.com', '2023-03-01 17:51:55', 'Caden', 'Conde');
 
 -- --------------------------------------------------------
 
@@ -98,7 +117,7 @@ CREATE TABLE `products` (
   `Price` double NOT NULL,
   `featured` tinyint(1) NOT NULL,
   `sold` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `products`
@@ -106,9 +125,9 @@ CREATE TABLE `products` (
 
 INSERT INTO `products` (`ID`, `Name`, `Description`, `imageFile`, `Price`, `featured`, `sold`) VALUES
 (13, 'rock', 'Mushroom', 'Rock7.png', 252, 1, 0),
-(15, 'rock2', 'Candle Holder', 'Rock5.png', 3.5, 0, 0),
-(20, 'rock3', 'Candle Holder', 'Rock8.png', 4, 0, 0),
-(75, 'Mushroom', 'Mushroom', 'shop_rock8.png', 50, 1, 0),
+(15, 'rock2', 'Candle Holder', 'Rock5.png', 3.5, 0, 1),
+(20, 'rock3', 'Candle Holder', 'Rock8.png', 4, 0, 1),
+(75, 'Mushroom', 'Mushroom', 'shop_rock8.png', 50, 1, 1),
 (77, 'rainbow rocks', 'Misc', 'shop_rock7.png', 20, 1, 0),
 (78, 'Rainbow heart', 'Heart', 'Rock1.png', 19.99, 0, 0),
 (79, 'Ornament', 'Misc', 'shop_rock4.png', 15.99, 0, 0),
@@ -130,7 +149,7 @@ INSERT INTO `products` (`ID`, `Name`, `Description`, `imageFile`, `Price`, `feat
 CREATE TABLE `prod_types` (
   `id` int(11) NOT NULL,
   `type` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `prod_types`
@@ -158,6 +177,12 @@ ALTER TABLE `about`
 --
 ALTER TABLE `login`
   ADD PRIMARY KEY (`Id`);
+
+--
+-- Indexes for table `maillist`
+--
+ALTER TABLE `maillist`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `orders`
@@ -194,10 +219,16 @@ ALTER TABLE `login`
   MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `maillist`
+--
+ALTER TABLE `maillist`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 
 --
 -- AUTO_INCREMENT for table `products`
@@ -209,7 +240,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `prod_types`
 --
 ALTER TABLE `prod_types`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

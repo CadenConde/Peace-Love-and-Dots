@@ -4,8 +4,8 @@
 
             <div class = "title"><h1>Manage Orders</h1></div>
             <br>
-            <br><br>
-
+            <button onclick="filterPend()" class="btn-secondary"><?php if(isset($_SESSION['orderSearch'])){echo "Show All";}else{echo "Show Pending";}?></button>
+            
             <table class= "tbl-full">
                 <tr>
                     <th>Item</th>
@@ -18,7 +18,13 @@
                 </tr>
 
                 <?php 
-                    $sql = "SELECT * FROM orders INNER JOIN products ON orders.prod_id=products.ID ORDER BY order_id desc;";
+                    $sql = "SELECT * FROM orders INNER JOIN products ON orders.prod_id=products.ID ";
+
+                    if(isset($_SESSION['orderSearch'])){ //filter by pending
+                        $sql .=  "WHERE status = 'Pending' ";
+                    }
+
+                    $sql .= "ORDER BY order_id desc;";
                     $res = mysqli_query($conn, $sql);
                     if ($res==TRUE)
                     {
@@ -62,6 +68,10 @@
             <script>
                 function setStatus(id=0, status = "Pending") {
                     location.href = "order-status.php?id=" + id + "&status=" + status;
+                }
+                
+                function filterPend() {
+                    location.href = ".php";
                 }
             </script>
         </div>

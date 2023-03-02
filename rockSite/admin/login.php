@@ -4,7 +4,7 @@
         <title>Rock Website - Login Page </title>
         <link rel="stylesheet" href="../css/admin.css">
 </head>
-<body style="background-image: url('../images/login-background.jpg'); background-repeat: no-repeat; background-size: cover; ">
+<body style="background-color:#124f94;">
     <div class="container">
         <div>
         <br><br>

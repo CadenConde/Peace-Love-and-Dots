@@ -11,11 +11,22 @@
 
     $sql = "INSERT INTO `orders` (`order_id`, `prod_id`, `status`, `customer_address`, `customer_email`, `time`, `customer_first`, `customer_last`) VALUES (NULL, '$id', 'Pending', '$address', '$email',current_timestamp() , '$fname', '$lname')";
     //echo $sql;
-    $res = mysqli_query($conn, $sql);
+    $res = mysqli_query($conn, $sql); //insert new order
 
-    if ($res==true)
+    $sql = "SELECT * FROM orders WHERE prod_id = $id"; //get order id
+    $res = mysqli_query($conn, $sql);
+    $row=mysqli_fetch_assoc($res);
+    $orderId = $row['order_id'];
+
+    if($res==true)
     {
+        mail(Client_Email,"Order Placed","Product Number $id was ordered by $fname $lname ($email). Their shipping address is $address");
+        //send to client
+
         
+
+        mail($email,"Order Receipt","Thank you for your order! \n \n Your order ID is $orderId. If you have any questions, please contact us at " .Client_Email);
+        //send to customer
         $sql = "UPDATE products SET sold = '1' WHERE ID = $id";
         $res = mysqli_query($conn, $sql);
         header("location:".SITEURL.'php/thanks.php');

@@ -19,7 +19,7 @@
                 <img src="<?php echo SITEURL;?>/images/<?php echo $image; ?>" alt="<?php echo $prod_descr; ?>" width = "20%" class="img-curve">
                 <h3>$<?php echo $price; ?></h3>
 
-                <div id="error_feild"></div>
+                <div id="error_field"></div>
             </div>
                 <form action="" method="POST" enctype="multipart/form-data">
                     <table class="info-tbl">
@@ -27,56 +27,56 @@
                         <tr>
                             <td>First Name: </td>
                             <td> 
-                                <input type="text" name="fName" placeholder="First Name">
+                                <input type="text" name="fName" placeholder="First Name" size="30">
                             </td>
                         </tr>
                         <tr>
                             <td>Last Name: </td>
                             <td width = "20%";> 
-                                <input type="text" name="lName" placeholder="Last Name">
+                                <input type="text" name="lName" placeholder="Last Name" size="30">
                             </td>
                         </tr>
                         <tr>
                             <td>Email: </td>
                             <td> 
-                                <input type="text" name="email" placeholder="e.g. johnsmith@gmail.com">
+                                <input type="text" name="email" placeholder="e.g. johnsmith@gmail.com" size="30">
                             </td>
                         </tr>
                         <tr><td><u>SHIPPING INFO</u></td></tr>
                         <tr>
                             <td>Address Line 1: </td>
                             <td> 
-                                <input type="text" name="line1" placeholder="Address Line 1">
+                                <input type="text" name="line1" placeholder="Address Line 1" size="30">
                             </td>
                         </tr>
                         <tr>
                             <td>Address Line 2: </td>
                             <td> 
-                                <input type="text" name="line2" placeholder="(optional)">
+                                <input type="text" name="line2" placeholder="(optional)" size="30">
                             </td>
                         </tr>
                         <tr>
                             <td>City:</td>
                             <td> 
-                                <input type="text" name="city" placeholder="e.g. New York">
+                                <input type="text" name="city" placeholder="e.g. New York" size="30">
                             </td>
                         </tr>
                         <tr>
                             <td>State:</td>
                             <td> 
-                                <input type="text" name="state" placeholder="e.g. NY">
+                                <input type="text" name="state" placeholder="e.g. NY" size="30">
                             </td>
                         </tr>
                         <tr>
                             <td>Zip Code:</td>
                             <td> 
-                                <input type="number" name="zip" placeholder="e.g. 12345">
+                                <input type="number" name="zip" placeholder="e.g. 12345" style="width:353px">
                             </td>
                         </tr>
                         <tr>
                             <td>Country:</td>
                             <td> 
-                                <input type="text" name="country" placeholder="e.g. United States">
+                                <input type="text" name="country" placeholder="e.g. United States" size="30">
                             </td>
                         </tr>
                         <tr>
@@ -97,7 +97,7 @@
     ?>
     
     <script type="text/javascript">
-        var fieldNameElement = document.getElementById('error_feild');
+        var fieldNameElement = document.getElementById('error_field');
         <?php
             if (isset($_POST['submit'])) {
                 $fname = $_POST['fName'];
