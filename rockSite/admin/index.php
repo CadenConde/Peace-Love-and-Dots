@@ -10,6 +10,10 @@
     $sql = "SELECT * FROM orders WHERE status = 'Complete'";
     $res = mysqli_query($conn, $sql);
     $complCount = mysqli_num_rows($res);
+
+    $sql = "SELECT * FROM mailList";
+    $res = mysqli_query($conn, $sql);
+    $subCount = mysqli_num_rows($res); 
 ?>
 
     <div class="main-content">
@@ -20,6 +24,11 @@
                 <h1><?php echo $prodCount?></h1>
                 Products Available
             </div>
+            <div class="col-4 text-center home-box">
+                <h1><?php echo $subCount?></h1>
+                On Mailing List
+            </div>
+            <br>
             <div class="col-4 text-center home-box">
                 <h1><?php echo $pendCount?></h1>
                 Pending Orders
