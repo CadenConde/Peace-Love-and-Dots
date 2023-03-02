@@ -17,9 +17,14 @@
 ?>
 
     <div class="main-content">
+        
         <div class="wrapper">
             <div class = "title"><h1>Home</h1></div>
-            <br><br><br><br><br><br>
+            <br><br>
+            <div>
+                <a href="http://localhost/rocksite/php/home.php" class="btn-homepage text-center" style="width: 25%;">Go To Home Page</a>
+            </div>
+            <br><br><br>
             <div class="col-4 text-center home-box">
                 <h1><?php echo $prodCount?></h1>
                 Products Available
@@ -39,9 +44,7 @@
             </div>
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         </div>
-        <div style="margin-left:10%;">
-            <a href="http://localhost/rocksite/php/home.php" class="btn-homepage text-center" style="width: 25%;">Go To Home Page</a>
-        </div>
+        
     </div>
     <body onLoad="addElement();"></body>
     <div id="div1"></div>
