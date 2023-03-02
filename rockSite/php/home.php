@@ -34,10 +34,10 @@
 
     <div class="menu">
         <div class="menu-lines">
-            <div class="hamburger" onclick="menuClick()">
-                <div class="ham-line"></div>
-                <div class="ham-line"></div>
-                <div class="ham-line"></div>
+            <div class="three-line-menu" onclick="menuClick()">
+                <div class="tlm-line"></div>
+                <div class="tlm-line"></div>
+                <div class="tlm-line"></div>
             </div>
             <div id="dropdown" class="dropdown-content">
                 <img src="../images/icons/homeicon.png" class="dropdown-img">
@@ -57,9 +57,9 @@
         
         <section class="center">
             <div class="home-banner">
-                <img src="../images/banner_heart_left.png" width="15%;">
-                <img src="../images/cropped_rockdudes_banner.png" width="40%;">
-                <img src="../images/banner_heart_right.png" width="15%;">
+                <img src="../images/banner_heart_left.png" width="15%;" alt="Rock heart on left side of banner">
+                <img src="../images/cropped_rockdudes_banner.png" width="40%;" alt="Peace, love, and dots text in center of banner">
+                <img src="../images/banner_heart_right.png" width="15%;" alt="Rock heart on right side of banner">
             </div>
             
             <h2>Featured Items</h2>
