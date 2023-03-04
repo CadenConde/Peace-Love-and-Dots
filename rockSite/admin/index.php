@@ -22,7 +22,7 @@
             <div class = "title"><h1>Home</h1></div>
             <br><br>
             <div>
-                <a href="http://localhost/rocksite/php/home.php" class="btn-homepage text-center" style="width: 25%;">Go To Home Page</a>
+                <a href="http://localhost/rocksite/php/home.php" class="btn-homepage text-center" style="width: 25%;">Go To Main Page</a>
             </div>
             <br><br><br>
             <div class="col-4 text-center home-box">
