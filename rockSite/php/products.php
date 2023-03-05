@@ -10,7 +10,7 @@
         </section>
     <!--Start of example Products-->
 <section>
-    <br>
+    
         <div class="sortBy" align="right">
             <div class="ddropdown"><u>Sort By Categories</u>
                 <div class="ddropdown-content">
