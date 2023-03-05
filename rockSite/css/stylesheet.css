@@ -259,7 +259,8 @@ h2 {
 
 .img-respond-small {
     padding-top: 50px;
-    max-width: 10vw;
+    max-width: 15vw;
+    max-height: 15vh;
     margin: none;
 }
 
