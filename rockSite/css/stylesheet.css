@@ -14,7 +14,7 @@ html {
 }
 
 @keyframes showcontent {
-    100% {background-color: #2ea8b0;}
+    100% {background-color: #45d1db;}
 }
 
 @keyframes scroll-anim {
@@ -73,13 +73,44 @@ html {
     width: 350px;
     top: 0;
 }
+.promobar {
+    animation: promo-animation 8s linear infinite;
+    background: linear-gradient(to right, rgb(255, 157, 157),rgb(255, 255, 144),rgb(134, 255, 134),rgb(158, 158, 255),rgb(215, 160, 255),rgb(255, 171, 255),rgb(255, 160, 160),rgb(255, 255, 135),rgb(134, 255, 134),rgb(167, 167, 255),rgb(218, 167, 255),rgb(255, 171, 255),rgb(255, 134, 134));
+    background-size: 200% 200%;
+    width: 100%;
+    height: 50px;
+    z-index: 102;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+    position: fixed;
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.447);
+}
+
+@keyframes promo-animation {
+    0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 50% 50%;
+	}
+    0% {
+		background-position: 100% 50%;
+	}
+}
+
+.promobar p{
+    font-size:30px;
+    text-align:center; 
+    margin-top:8px;
+    font-weight: bold;
+}
 
 .navbar {
     width: 100%;
     height: 89px;
     z-index: 101;
     position: fixed;
-    background-color: #53d5df;
+    background-color: #85f7ff;
     border-bottom: 2px solid black;
     display: flex;
     align-items: center;

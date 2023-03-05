@@ -31,24 +31,6 @@
         <a href="products.php">Shop</a>
         <a href="about.php">About</a>
     </div>
-
-    <div class="menu">
-        <div class="menu-lines">
-            <div class="hamburger" onclick="menuClick()">
-                <div class="ham-line"></div>
-                <div class="ham-line"></div>
-                <div class="ham-line"></div>
-            </div>
-            <div id="dropdown" class="dropdown-content">
-                <img src="../images/icons/homeicon.png" class="dropdown-img">
-                <a href="home.php">Home</a>
-                <img src="../images/icons/shopicon.png" class="dropdown-img">
-                <a href="products.php">Shop</a>
-                <img src="../images/icons/abouticon.png" class="dropdown-img">
-                <a href="about.php">About</a>
-            </div>
-        </div>
-    </div>
 </div>
 
     <div class="center">

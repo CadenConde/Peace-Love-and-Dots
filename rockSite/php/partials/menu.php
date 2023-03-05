@@ -1,4 +1,5 @@
 <?php include('../config/constants.php')?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +12,9 @@
 </head> 
 <body style="background-color:#F8E2C4; margin: 0 0;">  <!-- Background color-->
 
+<?php include('promotion.php')?>
 <div class="navbar">
+    
     <img src="../images/rockdudes_banner.png" alt="Heart Rock in cornner with company motto 'peace love and dots' next to it" class="banner">
     <div class="navlinks">
         <a href="home.php">Home</a>
@@ -37,6 +40,7 @@
         </div>
     </div>
 </div>
+
 
 </body>
 </html>
