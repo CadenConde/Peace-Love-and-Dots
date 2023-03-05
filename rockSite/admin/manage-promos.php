@@ -2,7 +2,7 @@
     <div class="main-content">
         <div class="wrapper">
 
-            <div class = "title"><h1>Manage Promotions</h1></div>
+            <div class = "title"><h1>Active Promotions</h1></div>
             <br><br>
 
             <a href="add-promo.php" class= "btn-primary">New Promotion</a>

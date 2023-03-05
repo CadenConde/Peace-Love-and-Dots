@@ -14,6 +14,10 @@
     $sql = "SELECT * FROM mailList";
     $res = mysqli_query($conn, $sql);
     $subCount = mysqli_num_rows($res); 
+
+    $sql = "SELECT * FROM promotions";
+    $res = mysqli_query($conn, $sql);
+    $promoCount = mysqli_num_rows($res); 
 ?>
 
     <div class="main-content">
@@ -41,6 +45,11 @@
             <div class="col-4 text-center home-box">
                 <h1><?php echo $complCount?></h1>
                 Completed Orders
+            </div>
+
+            <div class="col-4 text-center home-box">
+                <h1><?php echo $promoCount?></h1>
+                Active Promotions
             </div>
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         </div>

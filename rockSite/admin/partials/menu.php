@@ -14,12 +14,12 @@
                 <br>Home</a></li>
                 <br><br><br>
 
-                <li><a href="manage-promos.php"><img src="<?php echo SITEURL;?>/images/icons/megaphone.png" alt="User Icon" width = "50%">
-                <br>Promotions</a></li>
-                <br><br><br>
-
                 <li><a href="manage-products.php"><img src="<?php echo SITEURL;?>/images/icons/art-studies.png" alt="Product Icon" width = "50%">
                 <br>Products</a></li>
+                <br><br><br>
+                
+                <li><a href="manage-promos.php"><img src="<?php echo SITEURL;?>/images/icons/megaphone.png" alt="User Icon" width = "50%">
+                <br>Promotions</a></li>
                 <br><br><br>
 
                 <li><a href="manage-types.php"><img src="<?php echo SITEURL;?>/images/icons/menu.png" alt="Types Icon" width = "50%">

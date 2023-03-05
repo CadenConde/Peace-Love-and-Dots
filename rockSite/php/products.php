@@ -97,7 +97,7 @@
     ?>
     </table>
     <br><br>
-    <hr>
+    
 </section>
         <script>
             function sendOrder(id=0) {

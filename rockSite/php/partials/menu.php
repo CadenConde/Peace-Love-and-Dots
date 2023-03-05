@@ -10,7 +10,7 @@
     <script src="../scripts/menuClick.js"></script>
     <title>Peace, Love, & Dots</title>
 </head> 
-<body style="background-color:#F8E2C4; margin: 0 0;">  <!-- Background color-->
+<body class="background">  <!-- Background color-->
 
 <?php include('promotion.php')?>
 <div class="navbar">

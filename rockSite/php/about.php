@@ -1,10 +1,10 @@
 <?php include('partials/menu.php'); ?>
 <br>
     <!--About Info Starts-->
+    
    <section>
-       
         <br><br>
-        <h2 style="text-align:center">About Me!</h2>
+        <h2 style="text-align:center">About</h2>
         <?php 
                $sql = "SELECT * FROM about"; //get about from database
                $res = mysqli_query($conn, $sql);
@@ -17,13 +17,12 @@
                }
                ?>
         <div>
-        <img src="../images/PPRock Dudes.png" alt="Owner's Profile Picture" class="img-respond" style="float: left;" >
+            <img src="../images/PPRock Dudes.png" alt="Owner's Profile Picture" class="img-respond" style="float: right;" >
         </div>
         <div class="about-text">
             <?php echo $about?>
         </div>
         <!--About Info Ends-->
     </section>
-<br><br>
-        <hr>
+    <br><br><br>
    <?php include('partials/footer.php'); ?>
