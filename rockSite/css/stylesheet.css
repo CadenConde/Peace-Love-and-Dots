@@ -258,9 +258,8 @@ h2 {
 }
 
 .img-respond-small {
-    max-width: 13vw;
-    max-height: 8vw;
-    
+    padding-top: 50px;
+    max-width: 10vw;
     margin: none;
 }
 
