@@ -11,7 +11,7 @@
 
 <div class="main-content">
     <div class="wrapper">
-        <h1>Add Product</h1>
+        <h1>Update Promotion</h1>
         <br><br>
         <form action="" method="POST" enctype="multipart/form-data">
             <table class="tbl-30">
