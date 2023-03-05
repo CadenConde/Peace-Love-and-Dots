@@ -65,7 +65,17 @@ html {
 .btn-third:hover{
     background-color: #cc5252;
 }
-
+ .background{
+    background-color:#F8E2C4;
+    background-image: url(../images/bgImage.png);
+    background-size: 75%;
+    background-position-x: center;
+    background-position-y: 60%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    margin: 0 0;
+ }
 
 /* NAVBAR SECTION */
 
