@@ -16,12 +16,29 @@
                    }
                }
                ?>
-        <div>
-            <img src="../images/PPRock Dudes.png" alt="Owner's Profile Picture" class="img-respond" style="float: right;" >
-        </div>
-        <div class="about-text">
-            <?php echo $about?>
-        </div>
+        <table style="width:100%">
+            <tr>
+                <td>
+                    <div class="about-text">
+                        <?php echo $about?>
+                    </div>
+                </td>
+                <td  style="padding-right:5%">
+                    <div>
+                        <img src="../images/PPRock Dudes.png" alt="Owner's Profile Picture" class="img-respond" style="float: right;" >
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="center"><u>Socials</u></div>
+        <table style="width:100%; padding-left:20%; padding-right:20%">
+            <tr>
+                <td><a href="https://www.facebook.com/Peacelovedots/" class="socials">Facebook</a></td>
+                <td><a href="https://www.instagram.com/peacelovedots/" class="socials">Instagram</a></td>
+                <td><a href="http://tiktok.com/@peacelovedots" class="socials">TikTok</a></td>
+                <td><a href="http://www.pinterest.com/amykk727" class="socials">Pinterest</a></td>
+            </tr>
+        </table>
         <!--About Info Ends-->
     </section>
     <br><br><br>
