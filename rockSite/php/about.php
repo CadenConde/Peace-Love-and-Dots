@@ -25,7 +25,7 @@
                 </td>
                 <td  style="padding-right:5%">
                     <div>
-                        <img src="../images/PPRock Dudes.png" alt="Owner's Profile Picture" class="img-respond" style="float: right;" >
+                        <img src="../images/PPRock Dudes.webp" alt="Owner's Profile Picture" class="img-respond" style="float: right;" >
                     </div>
                 </td>
             </tr>

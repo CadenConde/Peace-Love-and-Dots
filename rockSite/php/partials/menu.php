@@ -13,11 +13,11 @@
 <body class="background">  <!-- Background color-->
 
 <?php include('promotion.php')?>
+
 <div class="navbar">
     
-    <img src="../images/rockdudes_banner.png" alt="Heart Rock in cornner with company motto 'peace love and dots' next to it" class="banner">
+    <a href="home.php"><img src="../images/navbar_logo.webp" alt="Heart Rock in cornner with company motto 'peace love and dots' next to it" class="banner"></a>
     <div class="navlinks">
-        <a href="home.php">Home</a>
         <a href="products.php">Shop</a>
         <a href="about.php">About</a>
     </div>
