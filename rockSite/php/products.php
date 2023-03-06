@@ -9,10 +9,9 @@
         </div>
         </section>
     <!--Start of example Products-->
-<section>
-    <br>
+    <section>
         <div class="side-sort">
-            <h6>Categories</h6>
+            <b nowrap>Filter by Categories<br></b>
  
             <div class="items">
                     <?php   
@@ -28,13 +27,10 @@
                                 $id = $rows['id'];
                                 $type = $rows['type'];
 
-                    
-                                
                                 ?>
-                                    <div class="btn-sort">
-                                        <a href="products.php?sort=<?php echo $type;?>"><?php echo $type; ?></a>
-                                        
-                                    </div>
+                                   
+                                        <a class="btn-sort" href="products.php?sort=<?php echo $type;?>"><?php echo $type; ?></a>
+                                    
                                     
                                 <?php
                                 
@@ -43,17 +39,18 @@
                     }
                        ?>
                        <br>
-                    <div class="btn-sort">
-                        <a href="products.php">All</a>
-                    </div>
-
+                 
+                        <a class="btn-sort" href="products.php">All</a>
+                    
+                        <br>
                         <form action="" method="POST">
-                            <h6>Price Range</h6>
-                            <label for="min-price">Min:</label>
-                            <input type="number" id="min-price" name="min-price" min="0">
-                            <label for="max-price">Max:</label>
-                            <input type="number" id="max-price" name="max-price" min="0">
-                            <input type="submit" class="btn-sort" name="range-submit" id="price-filter" value="Filter">
+                            <b style="padding-bottom:5px">Filter by Price Range<br></b>
+                            <div class="center">
+                                <label for="min-price" style="margin-right:10px;">Min:</label> <label for="max-price">Max:</label><br>
+                                <input type="number" id="min-price" name="min-price" style="margin-right:10px;">
+                                <input type="number" id="max-price" name="max-price"><br><br>
+                                <input type="submit" class="btn-sort" name="range-submit" id="price-filter" value="Filter">
+                            </div>
                         </form>
                         <?php
                     if(isset($_POST['range-submit']))
@@ -61,26 +58,22 @@
                         
                         $min = $_POST['min-price'];
                         $max = $_POST['max-price'];
-                        if( !isset($_POST['min-price']))
-                        {
-                            $min = 0;
-                        }
-                        if( isset($_POST['min-price']) && isset($_POST['max-price']))
-                        {
-                            echo '<script>function jsFunction(){location.href = "products.php?sort-min-price='.$_POST['min-price'].'&sort-max-price='.$_POST['max-price'].'";}';
-                            echo 'jsFunction();</script>';
-                        }
-                        if( isset($_POST['min-price']))
+                        
+                        if($max==Null)
                         {
                             echo '<script>function jsFunction(){location.href = "products.php?sort-min-price='.$_POST['min-price'].'";}';
                             echo 'jsFunction();</script>';
                         }
-                        if( isset($_POST['max-price']))
+                        if($min==Null)
                         {
                             echo '<script>function jsFunction(){location.href = "products.php?sort-max-price='.$_POST['max-price'].'";}';
                             echo 'jsFunction();</script>';
                         }
-                        
+                        if(isset($_POST['min-price']) && isset($_POST['max-price']))
+                        {
+                            echo '<script>function jsFunction(){location.href = "products.php?sort-min-price='.$_POST['min-price'].'&sort-max-price='.$_POST['max-price'].'";}';
+                            echo 'jsFunction();</script>';
+                        }
                     }       
                         ?>
             </div>
@@ -152,8 +145,7 @@
         }
     ?>
     </table>
-    <br><br>
-    <hr>
+    
 </section>
         <script>
             function sendOrder(id=0) {

@@ -9,7 +9,7 @@
                 $text = $row['promo_text'];
                 $discount = round((float)$row['percent_off'] * 100 ) . '%';
                 ?>
-                    <div class="promobar" style="margin-top:89px">
+                    <div class="promobar">
                         <p><?php echo $text?><br></p>
                     </div>
                 <?php
