@@ -10,10 +10,11 @@
         </section>
     <!--Start of example Products-->
 <section>
-    
-        <div class="sortBy" align="right">
-            <div class="ddropdown"><u>Sort By Categories</u>
-                <div class="ddropdown-content">
+    <br>
+        <div class="side-sort">
+            <h6>Categories</h6>
+ 
+            <div class="items">
                     <?php   
                     $sql = "SELECT * FROM prod_types";
                     $res = mysqli_query($conn, $sql);
@@ -26,23 +27,66 @@
                             {
                                 $id = $rows['id'];
                                 $type = $rows['type'];
+
                     
                                 
                                 ?>
-                                    <a href="products.php?sort=<?php echo $type;?>"><?php echo $type; ?></a>
+                                    <div class="btn-sort">
+                                        <a href="products.php?sort=<?php echo $type;?>"><?php echo $type; ?></a>
+                                        
+                                    </div>
+                                    
                                 <?php
                                 
                             }
                         }
                     }
-                    ?>
-                    <a href="products.php">All</a>
+                       ?>
+                       <br>
+                    <div class="btn-sort">
+                        <a href="products.php">All</a>
+                    </div>
 
-                </div>
+                        <form action="" method="POST">
+                            <h6>Price Range</h6>
+                            <label for="min-price">Min:</label>
+                            <input type="number" id="min-price" name="min-price" min="0">
+                            <label for="max-price">Max:</label>
+                            <input type="number" id="max-price" name="max-price" min="0">
+                            <input type="submit" class="btn-sort" name="range-submit" id="price-filter" value="Filter">
+                        </form>
+                        <?php
+                    if(isset($_POST['range-submit']))
+                    {
+                        
+                        $min = $_POST['min-price'];
+                        $max = $_POST['max-price'];
+                        if( !isset($_POST['min-price']))
+                        {
+                            $min = 0;
+                        }
+                        if( isset($_POST['min-price']) && isset($_POST['max-price']))
+                        {
+                            echo '<script>function jsFunction(){location.href = "products.php?sort-min-price='.$_POST['min-price'].'&sort-max-price='.$_POST['max-price'].'";}';
+                            echo 'jsFunction();</script>';
+                        }
+                        if( isset($_POST['min-price']))
+                        {
+                            echo '<script>function jsFunction(){location.href = "products.php?sort-min-price='.$_POST['min-price'].'";}';
+                            echo 'jsFunction();</script>';
+                        }
+                        if( isset($_POST['max-price']))
+                        {
+                            echo '<script>function jsFunction(){location.href = "products.php?sort-max-price='.$_POST['max-price'].'";}';
+                            echo 'jsFunction();</script>';
+                        }
+                        
+                    }       
+                        ?>
             </div>
-            
-            
         </div>
+               
+    </section>
 
     
     <table class="pro-tbl">
@@ -65,6 +109,18 @@
                     if(isset($_GET['sort'])){
                         $sorter = $_GET['sort'];
                         if($prod_descr != $sorter){
+                            continue;
+                        }
+                    }
+                    if(isset($_GET['sort-max-price'])){
+                        $priceSorterMax = $_GET['sort-max-price'];
+                        if($price > $priceSorterMax){
+                            continue;
+                        }
+                    }
+                    if(isset($_GET['sort-min-price'])){
+                        $priceSorterMin = $_GET['sort-min-price'];
+                        if($price < $priceSorterMin){
                             continue;
                         }
                     }
@@ -97,7 +153,7 @@
     ?>
     </table>
     <br><br>
-    
+    <hr>
 </section>
         <script>
             function sendOrder(id=0) {
