@@ -113,10 +113,8 @@ html {
 }
 
 .promobar p{
-    font-size:25px;
+    font-size:2vwpx;
     text-align:center; 
-    margin-top:4px;
-    margin-bottom:4px;
     font-weight: bold;
 }
 
