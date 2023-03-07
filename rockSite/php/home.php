@@ -2,7 +2,9 @@
 
 
     <script src="../scripts/scroll.js" defer></script>
-
+    <link href="../css/flickity.css" media="screen" rel="stylesheet">
+    <script src="../scripts/flickity.pkgd.min.js"></script>
+    
     <div class="center">
         <br><br><br><br><br>
         <!-- Featured products Start -->
@@ -10,11 +12,12 @@
         <section class="center">
 
             <div class="home-banner">
-                <img src="../images/banner_heart_left.png" width="15%;">
-                <img src="../images/cropped_rockdudes_banner.png" width="40%;">
-                <img src="../images/banner_heart_right.png" width="15%;">
+                <img src="../images/banner_heart_left.png" width="15%;" alt="Heart on left side of banner">
+                <img src="../images/cropped_rockdudes_banner.png" width="40%;" alt="Peace love and dots text">
+                <img src="../images/banner_heart_right.png" width="15%;" alt="Heart on right side of banner">
             </div>
 
+            <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true, "autoPlay": true, "lazyLoad": true }'>
 
                 <?php 
                     $sql = "SELECT * FROM products WHERE featured = '1' && sold = '0';";
@@ -33,9 +36,7 @@
                                 $image=$rows['imageFile'];
                                 $price=number_format($rows['Price'], 2);
                                 ?>
-                                <div class="img-spacing obs">
-                                    <a href="order.php?id=<?php echo $id?>"><img src="<?php echo SITEURL;?>/images/<?php echo $image; ?>" alt="<?php echo $prod_descr; ?>" width="90%" class="img-curve featured-img"></a>
-                                </div>
+                                <div class="gallery-cell"><a href="order.php?id=<?php echo $id?>"><img src="<?php echo SITEURL;?>/images/<?php echo $image; ?>" alt="<?php echo $prod_descr; ?>" class="carousel-img"></a></div>
                                 <?php
                             }
                         } else {
@@ -43,9 +44,8 @@
                         }
                     }
                 ?>
+            </div>
         </section>
-        
     </div>   
 
     <?php include('partials/footer.php'); ?>
-
