@@ -125,7 +125,7 @@
                         echo "<tr>";
                     } ?>
                         <td style="padding-right: 1%; padding-bottom:10px; width:25vw"><img src="<?php echo SITEURL;?>/images/<?php echo $image; ?>" alt="<?php echo $prod_descr;?>" width="100%" class="img-curve"></td>
-                        <td style="padding-right: 2%; padding-bottom:10px;"><?php echo $prod_name;?><br> $<?php echo $price;?><br>
+                        <td style="padding-right: 2%; padding-bottom:10px; width:15vw"><?php echo $prod_name;?><br> $<?php echo $price;?><br>
                             <button onclick="sendOrder(<?php echo $id;?>)" class="btn-secondary">Order</button><br>
                         </td>
                     <?php

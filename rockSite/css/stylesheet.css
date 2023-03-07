@@ -169,13 +169,14 @@ html {
 .side-sort{
     box-shadow: 0 4px 8px 0 rgb(0, 0, 0, .5), 0 6px 20px 0 rgb(0, 0, 0);
     height: 100%;
-    width: 220px;
+    width: 20vw;
+    max-width: 220px;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
     background-color: #bb9aa7;
-    padding-top: 10%;
+    padding-top: 15vh;
     padding-left: .5%;
     padding-right: 0.5%;
 }

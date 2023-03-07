@@ -10,27 +10,27 @@
         <div class="wrapper">
             <ul>
                 
-                <li><a href="index.php"><img src="<?php echo SITEURL;?>/images/icons/home.png" alt="Home Icon" width = "50%">
+                <li><a href="index.php"><img src="<?php echo SITEURL;?>/images/icons/home.webp" alt="Home Icon" width = "50%">
                 <br>Home</a></li>
                 <br><br><br>
 
-                <li><a href="manage-products.php"><img src="<?php echo SITEURL;?>/images/icons/art-studies.png" alt="Product Icon" width = "50%">
+                <li><a href="manage-products.php"><img src="<?php echo SITEURL;?>/images/icons/art-studies.webp" alt="Product Icon" width = "50%">
                 <br>Products</a></li>
                 <br><br><br>
                 
-                <li><a href="manage-promos.php"><img src="<?php echo SITEURL;?>/images/icons/megaphone.png" alt="User Icon" width = "50%">
+                <li><a href="manage-promos.php"><img src="<?php echo SITEURL;?>/images/icons/megaphone.webp" alt="User Icon" width = "50%">
                 <br>Promotions</a></li>
                 <br><br><br>
 
-                <li><a href="manage-types.php"><img src="<?php echo SITEURL;?>/images/icons/menu.png" alt="Types Icon" width = "50%">
+                <li><a href="manage-types.php"><img src="<?php echo SITEURL;?>/images/icons/menu.webp" alt="Types Icon" width = "50%">
                 <br>Categories</a></li>
                 <br><br><br>
 
-                <li><a href="manage-orders.php"><img src="<?php echo SITEURL;?>/images/icons/box.png" alt="Order Icon" width = "50%">
+                <li><a href="manage-orders.php"><img src="<?php echo SITEURL;?>/images/icons/box.webp" alt="Order Icon" width = "50%">
                 <br>Orders</a></li>
                 <br><br><br>
 
-                <li><a href="manage-account.php"><img src="<?php echo SITEURL;?>/images/icons/user.png" alt="User Icon" width = "50%">
+                <li><a href="manage-account.php"><img src="<?php echo SITEURL;?>/images/icons/user.webp" alt="User Icon" width = "50%">
                 <br>Account</a></li>
             </ul>
         </div>
