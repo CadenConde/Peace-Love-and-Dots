@@ -30,16 +30,40 @@
                 </td>
             </tr>
         </table>
-        <div class="center"><u>Socials</u></div>
-        <table style="width:100%; padding-left:20%; padding-right:20%">
+        <div class="center" style="font-size:5vh"><b>Links to Socials:</b></div>
+        <table style="width: 100%; padding-left:35.75%;  padding-right:33%">
             <tr>
-                <td><a href="https://www.facebook.com/Peacelovedots/" class="socials">Facebook</a></td>
-                <td><a href="https://www.instagram.com/peacelovedots/" class="socials">Instagram</a></td>
-                <td><a href="http://tiktok.com/@peacelovedots" class="socials">TikTok</a></td>
-                <td><a href="http://www.pinterest.com/amykk727" class="socials">Pinterest</a></td>
+                <td>
+                    <a href="https://www.facebook.com/Peacelovedots/">
+                        <div>
+                            <span class="socials socials-fb" role="img" aria-label="Link to Facebook"> </span>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="https://www.instagram.com/peacelovedots/">
+                        <div>
+                            <span class="socials socials-ig" role="img" aria-label="Link to Instagram"> </span>
+                        </div>
+                    </a>
+                </td> 
+                <td>
+                    <a href="http://tiktok.com/@peacelovedots">
+                        <div>
+                            <span class="socials socials-tt" role="img" aria-label="Link to TikTok"> </span>
+                        </div>
+                    </a>
+                </td> 
+                <td>
+                    <a href="http://www.pinterest.com/amykk727">
+                        <div>
+                            <span class="socials socials-pi" role="img" aria-label="Link to Pinterest"> </span>
+                        </div>
+                    </a>
+                </td>    
             </tr>
         </table>
         <!--About Info Ends-->
     </section>
-    <br><br><br>
+    
    <?php include('partials/footer.php'); ?>

@@ -447,27 +447,40 @@ h2 {
 /*Socials*/
 
 .socials{
-    background-color: #04AA6D;
-    border: none;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
-    border-radius: 50%;
+    transition: background-image .25s ease-in-out;
+    
+}
+.socials-fb{
+    background-image: url(../images/icons/fb-black.webp);
+}
+.socials-ig{
+    background-image: url(../images/icons/ig-black.webp);
+}
+.socials-tt{
+    background-image: url(../images/icons/tt-black.webp);
+}
+.socials-pi{
+    background-image: url(../images/icons/pi-black.webp);
 }
 
-.socials:hover {
-    background-color: #00492e;
-    border: none;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    border-radius: 50%;
+
+.socials-fb:hover {
+    background-image: url(../images/icons/fb-color.webp);
+}
+.socials-ig:hover {
+    background-image: url(../images/icons/ig-color.webp);
+}
+.socials-tt:hover {
+    background-image: url(../images/icons/tt-color.webp);
+}
+.socials-pi:hover {
+    background-image: url(../images/icons/pi-color.webp);
 }
