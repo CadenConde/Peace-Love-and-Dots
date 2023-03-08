@@ -168,7 +168,7 @@ html {
 .side-sort{
     box-shadow: 0 4px 8px 0 rgb(0, 0, 0, .5), 0 6px 20px 0 rgb(0, 0, 0);
     height: 100%;
-    width: 20vw;
+    width: 220px;
     max-width: 220px;
     position: fixed;
     z-index: 1;
@@ -176,8 +176,8 @@ html {
     left: 0;
     background-color: #bb9aa7;
     padding-top: 110px;
-    padding-left: .5%;
-    padding-right: 0.5%;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 input[type='number']{
     width: 45px;
@@ -293,7 +293,7 @@ input[type='number']{
 h2 {
     font-weight: lighter;
     font-size: 5vw;
-    color: #192D34;
+    color: #000000;
     text-shadow: 2px 2px 3px rgba(40, 40, 40, 0.352);
 }
 
@@ -317,19 +317,36 @@ h2 {
 }
 
 .gallery {
-    margin: auto;
+    width: 70%;
+    margin: 0 auto;
+    padding-right: 15%;
+    padding-left: 15%;
 }
 
 .gallery-cell {
     height: 40vh;
-    padding: 0px 10px;
+    
+    width: calc((100% / 3)); /* adjust the width and margin to your liking */
+   
+    /*padding: 2vw;*/
 }
 
 .carousel-img {
     transition: .5s ease-in-out;
     -webkit-transition: .5s ease-in-out;
-    border-radius: 5px;
     height: 40vh;
+}
+
+/* Set the opacity of each carousel cell to 0.8 by default */
+  /* When a carousel cell is selected, set its opacity to 1 */
+.gallery-cell.is-selected {
+    filter: none;
+}
+
+  /* Hide the previous and next buttons on the sides of the carousel */
+.flickity-prev-next-button.previous,
+.flickity-prev-next-button.next {
+    display: none;
 }
 
 
@@ -349,51 +366,30 @@ h2 {
 }
 
 .pro-tbl {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 220px;
-    padding-right: 3%;
-    width: 100%;
+    border-collapse: collapse; 
+    display: inline-table;
+    height: 420px;
+    margin-bottom: 30px;
 }
 
 .pro-tbl td {
-    padding-right: 5%;
-    padding-left: 5%;
+    width:350px;
 }
 
-/*sort by category*/
-
-.ddropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #EB6363;
-    min-width: 120px;
-    z-index: 1;
-    right: 0;
-    font-size: 15px;
-    margin-right: 2%;
-    width: 20%;
-    overflow: auto;
-    border: 1px outset black;
+.on-sale{
     border-radius: 5px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: rgb(99, 99, 99);
+    border:#000000 solid 2px;
+    width: 120px;
+    margin-left:115px;
+    margin-left:115px;
 }
-.ddropdown:hover .ddropdown-content {
-    display: block;
-}
-.ddropdown-content a {
-    display: block;
-    text-decoration: none;
-    font-weight: bolder;
-    color: #561d1d;
-    text-decoration: none;
-    text-align: right;
-    padding: 12px 12px;
-    border-radius: inherit;
-}
-.ddropdown-content a:hover {
-    background-color: #682a2a;
-    color: #d17171;
+  
+@media screen and (max-width: 100px) {
+    .pro-tbl td {
+        display: block;
+        float: left;
+    }
 }
 
 
@@ -440,6 +436,10 @@ h2 {
     height: 14rem;
     background-image:linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.3));
     background-size: 100% 14rem;
+}
+
+.footer a{
+    color: black
 }
 
 /*Socials*/

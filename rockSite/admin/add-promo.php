@@ -64,8 +64,10 @@ if(isset($_POST['submit']))
     $discount = $_POST['discount'];
 
     $sql = "INSERT INTO `promotions` (`id`, `category`, `promo_text`, `percent_off`, `featured`) VALUES (NULL, '$category', '$text', '$discount', '0')";
+    $res = mysqli_query($conn, $sql);
 
-    $res = mysqli_query($conn, $sql) or die();
+    $sql = "UPDATE `products` SET `Price` = Price*(1-$discount) WHERE `products`.`Description` = '$category';";
+    $res = mysqli_query($conn, $sql);
 
     if ($res = TRUE)
     {

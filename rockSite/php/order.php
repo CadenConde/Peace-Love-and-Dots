@@ -12,12 +12,26 @@
             $prod_descr=$rows['Description'];
             $image=$rows['imageFile'];
             $price=number_format($rows['Price'], 2);
+            $sql2 = "SELECT * FROM promotions WHERE category = '$prod_descr'"; //check for sales
+            $res2 = mysqli_query($conn, $sql2);
+            $count2 = mysqli_num_rows($res2);
+            if($count2>0){
+                $rows2 = mysqli_fetch_assoc($res2);
+                $perc = $rows2['percent_off'];
+                $sale = $perc*100;
+
+                $saleText = "Save ".$sale."%";
+                $price="<strike style='font-size:16px'>$".number_format(($price/(1-$perc)),2)."</strike> $$price";
+            }
+            else{
+                $price = "$".$price;
+            }
             
             ?>
             <div class="center">
                 <h1>ORDER ITEM</h1>
                 <img src="<?php echo SITEURL;?>/images/<?php echo $image; ?>" alt="<?php echo $prod_descr; ?>" width = "20%" class="img-curve">
-                <h3>$<?php echo $price; ?></h3>
+                <h3><?php echo $price; ?></h3>
 
                 <div id="error_field"></div>
             </div>

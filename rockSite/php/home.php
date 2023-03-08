@@ -22,8 +22,10 @@
             </div>
 
             <!--adjust width based on number of items-->
-            <div class="gallery js-flickity" style="width:<?php $width = (15*$count); if($width<=70){echo $width;}else{echo "70";};?>%"
-            data-flickity-options='{"pauseAutoPlayOnHover": false, "wrapAround": true, "autoPlay": 3000, "lazyLoad": true, "prevNextButtons": false, "pageDots": false}'>
+            <div class="gallery js-flickity"
+            data-flickity-options='{"pauseAutoPlayOnHover": false, "wrapAround": true, 
+                "autoPlay": 3000, "lazyLoad": true, "prevNextButtons": false,
+                "draggable":false, "pageDots": false, "contain" : true}'>
 
                 <?php 
                     $sql = "SELECT * FROM products WHERE featured = '1' && sold = '0';";

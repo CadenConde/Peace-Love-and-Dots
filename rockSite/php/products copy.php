@@ -76,8 +76,10 @@
     <!--sidebar-->
 
     <!--products-->
-    
-<section style="padding-left:300px;">
+    <!--
+    <table class="pro-tbl">
+    -->
+    <div>
     <?php 
         $sql = "SELECT * FROM products WHERE sold = 0";
         $res = mysqli_query($conn, $sql);
@@ -94,8 +96,6 @@
                     $prod_descr=$rows['Description'];
                     $image=$rows['imageFile'];
                     $price=number_format($rows['Price'], 2);
-
-
                     if(isset($_GET['sort'])){
                         $sorter = $_GET['sort'];
                         if($prod_descr != $sorter){
@@ -114,33 +114,23 @@
                             continue;
                         }
                     }
-
-                    $sql2 = "SELECT * FROM promotions WHERE category = '$prod_descr'"; //check for sales
-                    $res2 = mysqli_query($conn, $sql2);
-                    $count2 = mysqli_num_rows($res2);
-                    if($count2>0){
-                        $rows2 = mysqli_fetch_assoc($res2);
-                        $perc = $rows2['percent_off'];
-                        $sale = $perc*100;
-
-                        $saleText = "Save ".$sale."%";
-                        $price="<strike style='font-size:16px'>$".number_format(($price/(1-$perc)),2)."</strike> $$price";
-                    }
-                    else{
-                        $price="$".$price;
-                    }
-
                     $counter++;
                     ?>
-                        <table class="pro-tbl" >
-                            <tr><td style="text-align:center"><img src="<?php echo SITEURL;?>/images/<?php echo $image; ?>" alt="<?php echo $prod_descr;?>" height="250px" class="img-curve"></tr></td>
-                            <tr><td style="text-align:center"><?php echo $prod_name;?></tr></td>
-                            <tr><td style="text-align:center"><?php if(isset($saleText)){echo "<div class='on-sale' style='background-color:rgb(80,250,80)'>$saleText</div>";}else{echo "<br>";}?></tr></td>
-                            <tr><td style="text-align:center"><?php echo $price;?></tr></td>
-                            <tr><td style="text-align:center"><button onclick="sendOrder(<?php echo $id;?>)" class="btn-secondary">Order</button></tr></td>
-                        </table>
+                    <?php 
+                    if ($counter % 2 != 0)
+                    {
+                        echo "<tr>";
+                    } ?>
+                        <td style="padding-right: 1%; padding-bottom:10px; width:25vw"><img src="<?php echo SITEURL;?>/images/<?php echo $image; ?>" alt="<?php echo $prod_descr;?>" width="100%" class="img-curve"></td>
+                        <td style="padding-right: 2%; padding-bottom:10px; width:15vw"><?php echo $prod_name;?><br> $<?php echo $price;?><br>
+                            <button onclick="sendOrder(<?php echo $id;?>)" class="btn-secondary">Order</button><br>
+                        </td>
                     <?php
-                    unset($saleText);
+                    if($counter % 2 == 0){
+                        echo "</tr>";
+                    }
+                    ?>
+                    <?php
                 }
                 if($counter == 0){
                     echo '<br><div class = "center">No Products Found</div>';
@@ -150,9 +140,11 @@
             }
             
         }
-    ?> 
+    ?>
+    </div>
+    <!--</table>-->
+    
 </section>
-
         <script>
             function sendOrder(id=0) {
                 location.href = "order.php?id=" + id;

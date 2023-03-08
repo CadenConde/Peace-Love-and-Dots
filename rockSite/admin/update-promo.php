@@ -73,9 +73,21 @@ if(isset($_POST['submit']))
     $text = $_POST['text'];
     $discount = $_POST['discount'];
     //`category`, `promo_text`, `percent_off`, `featured`) VALUES (NULL, '$category', '$text', '$discount', '0')";
-    $sql = "UPDATE promotions SET category = '$category', promo_text = '$text', percent_off = '$discount' WHERE id = $id";
 
-    $res = mysqli_query($conn, $sql) or die();
+    $sql = "SELECT * FROM promotions WHERE `id` = $id";
+    $res = mysqli_query($conn, $sql);
+    $row=mysqli_fetch_assoc($res);
+    $oldCategory = $row['category'];
+    $oldDiscount = $row['percent_off'];
+
+    $sql = "UPDATE `products` SET `Price` = Price/(1-$oldDiscount) WHERE `products`.`Description` = '$oldCategory';";
+    $res = mysqli_query($conn, $sql);
+
+    $sql = "UPDATE promotions SET category = '$category', promo_text = '$text', percent_off = '$discount' WHERE id = $id";
+    $res = mysqli_query($conn, $sql);
+
+    $sql = "UPDATE `products` SET `Price` = Price*(1-$discount) WHERE `products`.`Description` = '$category';";
+    $res = mysqli_query($conn, $sql);
 
     if ($res = TRUE)
     {

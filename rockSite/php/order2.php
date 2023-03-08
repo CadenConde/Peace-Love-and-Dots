@@ -9,16 +9,33 @@
         $rows = mysqli_fetch_assoc($res);
             $id = $rows['ID'];
             $image=$rows['imageFile'];
+            $prod_descr=$rows['Description'];
             $price=number_format($rows['Price'], 2);
+            $pricePal=number_format($rows['Price'], 2);
+            $sql2 = "SELECT * FROM promotions WHERE category = '$prod_descr'"; //check for sales
+            $res2 = mysqli_query($conn, $sql2);
+            $count2 = mysqli_num_rows($res2);
+            if($count2>0){
+                $rows2 = mysqli_fetch_assoc($res2);
+                $perc = $rows2['percent_off'];
+                $sale = $perc*100;
+
+                $saleText = "Save ".$sale."%";
+                $price="<strike style='font-size:16px'>$".number_format(($price/(1-$perc)),2)."</strike> $$price";
+            }
+            else{
+                $price = "$".$price;
+            }
             
             ?>
             <div class="center">
 
                 <h1>ORDER ITEM</h1>
                 <img src="<?php echo SITEURL;?>/images/<?php echo $image; ?>" alt="<?php echo $prod_descr; ?>" width = "20%" class="img-curve">
-                <h3>$<?php echo $price; ?></h3>
+                <h3><?php echo $price; ?></h3>
 
                 <p>Please review your information before ordering:</p>
+                
                 <br>
                 
                 <p><u>Name:</u> <?php echo $_GET['fname'];?> <?php echo $_GET['lname'];?></p>
@@ -41,11 +58,6 @@
 
         $vars = "?prod_id=$id&fname=$fname&lname=$lname&email=$email&address1=$address1&address2=$address2&address3=$address3&address4=$address4";      
     ?>
-    
-
-
-
-
 
     <!--paypal stuff-->
     <div id="smart-button-container">
@@ -68,7 +80,7 @@
 
         createOrder: function(data, actions) {
           return actions.order.create({
-            purchase_units: [{"amount":{"currency_code":"USD","value": <?php echo $price; ?>}}]
+            purchase_units: [{"amount":{"currency_code":"USD","value": <?php echo $pricePal;?>}}]
           });
 
           sendOrder();
