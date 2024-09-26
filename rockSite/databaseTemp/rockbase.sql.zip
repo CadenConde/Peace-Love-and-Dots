@@ -100,10 +100,10 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`order_id`, `prod_id`, `status`, `customer_address`, `customer_email`, `time`, `customer_first`, `customer_last`) VALUES
-(56, 15, 'Pending', '1958 Spindletop Ln.  Dayton, OH 45458 United States', 'cadenconde@gmail.com', '2023-03-01 17:15:21', 'Caden', 'Conde'),
-(57, 20, 'Pending', '1958 Spindletop Ln.  Dayton, OH 45458 United States', 'cadenconde@gmail.com', '2023-03-01 17:21:51', 'Caden', 'Conde'),
-(58, 75, 'Pending', '1958 Spindletop Ln.  Dayton, OH 45458 United States', 'cadenconde@gmail.com', '2023-03-01 17:51:55', 'Caden', 'Conde'),
-(59, 77, 'Pending', '1958 Spindletop Ln.  Dayton, OH 45458 United States', 'cadenconde@gmail.com', '2023-03-02 16:29:20', 'Caden', 'Conde');
+(56, 15, 'Pending', '1234 Street Name Ln.  Columbus, OH 43210 United States', 'cadenconde@gmail.com', '2023-03-01 17:15:21', 'Caden', 'Conde'),
+(57, 20, 'Pending', '1234 Street Name Ln.  Columbus, OH 43210 United States', 'cadenconde@gmail.com', '2023-03-01 17:21:51', 'Caden', 'Conde'),
+(58, 75, 'Pending', '1234 Street Name Ln.  Columbus, OH 43210 United States', 'cadenconde@gmail.com', '2023-03-01 17:51:55', 'Caden', 'Conde'),
+(59, 77, 'Pending', '1234 Street Name Ln.  Columbus, OH 43210 United States', 'cadenconde@gmail.com', '2023-03-02 16:29:20', 'Caden', 'Conde');
 
 -- --------------------------------------------------------
 
