@@ -1,6 +1,6 @@
-# RockSite
+# Peace Love and Dots
 
-RockSite is a website developed for a small business owner selling hand-painted rocks on Etsy. This project features a full ordering system integrated with PayPal, allowing users to purchase items securely. The backend provides functionality for product management and order tracking. The site was built by a team of four, including myself.
+Peace Love and Dots is a website developed for a small business owner selling hand-painted rocks on Etsy. This project features a full ordering system integrated with PayPal, allowing users to purchase items securely. The backend provides functionality for product management and order tracking. The site was built by a team of four, including myself.
 
 ## Features
 
@@ -26,10 +26,10 @@ RockSite is a website developed for a small business owner selling hand-painted 
 ## Screenshots
 
 Here are some previews of the website:
-<p><i>Front-End of RockSite</i></p>
+<p><i>Front-End of Peace Love and Dots</i></p>
 <img src="media/FrontEnd.png" alt="Home Page" width="500"/>
 
-<p><i>Back-End of RockSite</i></p>
+<p><i>Back-End of Peace Love and Dots</i></p>
 <img src="media/BackEnd.png" alt="Product Page" width="500"/>
 
 ## Credits
